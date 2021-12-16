@@ -1,0 +1,3589 @@
+
+<!DOCTYPE html> 
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="ru"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="ru"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="ru"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9" lang="ru"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><html lang="ru"><!--<![endif]-->
+<head>
+	<title>Новосибирский Государственный Аграрный Университет</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <meta name="description" content="Новосибирский государтвенный аграрный университет" />
+    <meta name="keywords" content="Аграрный университет Новосибирск" />
+      <meta http-equiv="imagetoolbar" content="no" />	 
+
+    
+    <link rel="icon" href="/themes/favicon2011.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/themes/favicon2011.ico" type="image/x-icon" />
+		<meta name='yandex-verification' content='771e5652e16b9536' />
+    <script type="text/javascript" src="/scripts/modernizr-2.0.6.min.js"></script>
+    	
+	<link rel="stylesheet" href="/themes/styles/screen_2011.css?1638861512" type="text/css" />
+	    <link rel="stylesheet" href="/themes/styles/ee.css" type="text/css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/themes/styles/ie-fix.css" type="text/css" /><![endif]-->
+    <link rel="stylesheet" href="/themes/styles/jquery.fancybox-1.3.5.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/no-ie6.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/jquery-ui-1.8.2.custom.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/colorbox.css?1" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/select2.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/comment_form.css" type="text/css" />
+<link rel="apple-touch-icon" href="/themes/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/themes/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/themes/images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/themes/images/touch-icon-ipad-retina.png">
+
+
+	<script type="text/javascript" src="/scripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery/select2/select2.js"></script>
+		<script type="text/javascript" src="/scripts/highslide/highslide-with-gallery.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = '/scripts/highslide/graphics/';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+hs.showCredits = false;
+hs.fullExpandTitle = 'Полный размер';
+hs.restoreTitle = 'Щелчок мышью закрывает изображение, клавиши-стрелки используются для перехода к предыдущему и следующему изображению';
+hs.loadingText = 'Загрузка&hellip;';
+hs.loadingTitle = 'Щёлкните мышью для отмены';
+hs.allowMultipleInstances = false;
+
+</script>
+	            <link rel="stylesheet" type="text/css" href="/scripts/tooltipster/dist/css/tooltipster.bundle.min.css" />
+            <link rel="stylesheet" type="text/css" href="/scripts/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+            <script type="text/javascript" src="/scripts/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+            <script type='text/javascript'>
+                jQuery(document).ready(function($) {
+                    //подмена http на https
+                    let a = $(this).find("a[href^='http://nsau.edu.ru']");
+                    console.log(a.length);
+                    if (a.length > 0){
+                        a.each(function(){
+                            $(this).attr('href', $(this).attr('href').replace("http", "https"));
+                        });
+                    }
+
+                    let files = $(this).find(".sig_files");
+                    if (files.length > 0){
+                        let falseId = 1;
+                        files.each(function(){
+
+                            let el = $(this);
+                            let fileId = /\d+/.exec(el.attr('href'));
+
+                            if(fileId != null){
+
+                                //el.prepend('<span class="sig_' + falseId + '"></span>');
+                                el.before('<a class="sig_files" href="'+'/file/sig/' + fileId[0] + '" style="color: #fff!important; font-size: 15px;"><span class="sig_' + falseId + '"></span></a>');
+
+                                $('span.sig_'+ falseId).tooltipster({
+                                    theme: 'tooltipster-borderless',
+                                    interactive: true,
+                                    side: ['top'],
+                                    functionPosition: function(instance, helper, position){
+                                            position.coord.top -= 26;
+                                            //position.coord.left += 10;
+                                            return position;
+                                     },
+                                    contentAsHTML: true,
+                                    functionInit: function(instance, helper){
+                                        //поденить
+                                        //let content = '<a href="'+ location.protocol +'//'+ location.host +'/file/sig/' + fileId[0] + '" style="color: #fff!important; font-size: 15px;">Скачать ЭЦП </a>';
+                                        let content = 'Скачать ЭЦП';
+                                        // save the edited content
+                                        instance.content(content);
+                                    }
+                                });
+                                falseId++;
+                            }
+                        });
+				    }
+
+				    $('a.sig_with').tooltipster({
+                        theme: 'tooltipster-borderless',
+                        position: ['top'],
+                        functionPosition: function(instance, helper, position){
+                                position.coord.top -= 25;
+                                return position;
+                         },
+                        functionInit: function(instance, helper){
+                            $(helper.origin).prepend('<span></span>');;
+
+                            let content = 'Подписан ЭЦП';
+                            instance.content(content);
+                        }
+                    });
+
+                });
+             </script>
+				<script type="text/javascript" src="/scripts/jquery/jquery.fancybox-1.3.4.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			//табы
+			$('ul.tabs').delegate('li:not(.current)', 'click', function() {
+				// var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				$(this).addClass('current').siblings().removeClass('current')
+							.parents('div.announce_tabs_container').find('div.box2').hide().eq($(this).index()).fadeIn(150);
+				// window.scrollTo(0,scrollTop);
+				// $("div.not_registered:first").removeClass("hidden");
+				// $("div.not_registered:last").addClass("hidden");
+			});
+		});
+	</script>
+
+	<script type="text/javascript" src="/scripts/no-ie6.js"></script>
+	<script type="text/javascript" src="/scripts/passgen.js"></script>
+	<script type="text/javascript" src="/scripts/renews.js"></script>
+	<script type="text/javascript" src="/scripts/tiny_mce/tiny_mce.js"></script>
+	
+		<script type="text/javascript">	
+					
+			tinyMCE.init({
+				// General options12 
+				mode : "textareas",
+		editor_selector : "wysiwyg",
+				theme : "advanced",
+        elements : "ajaxfilemanager",
+        convert_urls: false,
+				language: "ru",
+        width: "100%",
+				plugins : "fullscreen,table,advimage,advlink,media,contextmenu,paste,template,inlinepopups",
+	
+				// Theme options2
+				theme_advanced_buttons2_add : "media,liststyle,fullscreen, pasteword",
+				theme_advanced_buttons3_add : "tablecontrols,|emotions,images,|,template",
+				theme_advanced_toolbar_location : "top",
+				theme_advanced_toolbar_align : "left",
+				theme_advanced_statusbar_location : "bottom",
+				theme_advanced_resizing : true,
+	 theme_advanced_resize_horizontal : true,
+        apply_source_formatting : true,
+		paste_strip_class_attributes : "all",
+        paste_remove_styles : true,
+			paste_auto_cleanup_on_paste : true,
+			paste_remove_spans:true,	
+				// Skin options
+				skin : "o2k7",
+				skin_variant : "silver",
+	
+				// Example content CSS (should be your site CSS)
+				//content_css : "css/example.css",
+        content_css: "/themes/styles/screen-tinymce.css?1",
+	
+				// Drop lists for link/image/media/template dialogs
+        plugin_insertdate_dateFormat : "%d.%m.%Y",
+        plugin_insertdate_timeFormat : "%H:%M:%S",
+											extended_valid_elements : "h1[*],p[*],H1[*],h2[*],H2[*],h3[*],H3[*],h4[*],H5[*],h6[*],H6[*],td[*],tr[*],th[*],table[*],tbody[*],hr[*],font[*],span[*],div[*],a[*],strong[*],small[*],em[*],ul[*],li[*]",
+				//template_external_list_url : "js/template_list.js",
+				external_link_list_url : "js/link_list.js",
+				external_image_list_url : "",
+				flash_external_list_url : "js/flash_list.js",
+				media_external_list_url : "js/media_list.js",
+        file_browser_callback :  function ajaxfilemanager(field_name, url, type, win) {
+				var ajaxfilemanagerurl = "/scripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php?afm=00ac751cfa2b4a73c1a300a919f228ac";
+				switch (type) {
+					case "image":
+						break;
+					case "media":
+						break;
+					case "flash": 
+						break;
+					case "file":
+						break;
+					default:
+						return false;
+				}
+				tinyMCE.activeEditor.windowManager.open({
+					url: ajaxfilemanagerurl,
+					width: 782,
+					height: 440,
+					inline : "yes",
+					close_previous : "no"
+				},{
+					window : win,
+					input : field_name
+				});
+			},
+		//paste_use_dialog : false,
+		
+         theme_advanced_resize_horizontal : true,
+        apply_source_formatting : true,
+		paste_strip_class_attributes : "all",
+                paste_remove_styles : true,
+				// Replace values for the template plugin
+				/*template_replace_values : {
+					username : "Some User",
+					staffid : "991234"
+				},*/
+				style_formats : [
+					{title: "Большой заголовок", block: "p", classes: "font_big_head" },
+					{title: "Мелкий текст", inline: "span", classes: "font_mini", split: false},
+					{title: "Бордовый разделитель", selector: "hr", classes: "sub_hr"},
+					{title: "ФИО", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a,hr", classes: "name-color"},
+					{title: "Картинка слева", selector: "p,img,hr", classes: "float-right"},
+					{title: "Картинка справа", selector: "p,img,hr", classes: "float-left"},
+					{title: "Серый блок", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a", classes: "gray-radius-block"},
+					{title: "Выделенная строка (Медовый цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_honey"},
+					{title: "Выделенная строка (Брусничный цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_berry"},
+					{title: "Выделенная ячейка", selector: "table.nsau_table td", classes: "td_highlight"},
+					{title: "Стилизованная таблица НГАУ", selector: "table", classes: "nsau_table"},
+					{title: "Спойлер", selector: "li,div,ul,td", classes: "menunav"},
+				],
+				template_templates: [
+					{title: "Карточка персоны", src: "/themes/template/person_card.html", description: "Карточка с выравниванием картинки по левой стороне"},
+					{title: "Новинка", src: "/themes/template/nova.html", description: "Выделение красным цветом новинки"},
+					{title: "Спойлер", src: "/themes/template/spoil.html", description: "JS для спойлера"}
+					
+				]
+			});
+	@mail.com
+			function ajaxfilemanager(field_name, url, type, win) {
+				var ajaxfilemanagerurl = "/scripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php?afm=39931f3bc166deaa8cd48714ba65bab7";
+				switch (type) {
+					case "image":
+						break;
+					case "media":
+						break;
+					case "flash": 
+						break;
+					case "file":
+						break;
+					default:
+						return false;
+				}
+				tinyMCE.activeEditor.windowManager.open({
+					url: ajaxfilemanagerurl,
+					width: 782,
+					height: 440,
+					inline : "yes",
+					close_previous : "no"
+				},{
+					window : win,
+					input : field_name
+				});
+			}
+		</script>
+	<script type="text/javascript" src="/scripts/app.js"></script>
+
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			ModalEdit = function(module_id) {
+				$("a.modal_edit").click(function() {
+					var $this = $(this);
+					var param = $(this).attr("href").split("?");
+					var uri = param[0];
+					if(param[1] != null) {
+						param = param[1].split("&");
+						for(var i = 0; i < param.length; i++) {
+							param[i] = param[i].split("=");
+						}
+			@mail.com		}
+					if((param[0] != null && param[0][0] == "node" && param[0][1]) && (param[1] && param[1][0] == "action" && param[1][1] == "edit#form") && (param[2] && param[2][0] == "mode" && param[2][1] == "modal")) {
+						var request = {"module": module_id, "mode": "html_code", "params": param[3][1], "uri": uri, "node": param[0][1], "action": param[1][1], "item_id": param[3][1]};
+						$.ajax({
+							type: "POST",
+							url: "/ajax_mode/", 
+							data: request,
+							success: function( data ) {
+								//ui.item.find("em.load").css("display", "none");
+								$.fancybox({
+									content: data,
+									padding : 17,
+									margin : 40,
+									opacity : false,
+									modal : false,
+									cyclic : false,
+									scrolling : "auto",	// "auto", "yes" or "no"
+							
+									//width : 560,
+									//height : 340,
+									autoWidth: true,
+							
+									autoScale : true,
+									autoDimensions : true,
+									centerOnScroll : false,
+							
+									ajax : {},
+									swf : { wmode: "transparent" },
+							
+									hideOnOverlayClick : true,
+									hideOnContentClick : false,
+							
+									overlayShow : true,
+									overlayOpacity : 0.76,
+									overlayColor : "#000",
+							
+									titleShow : true,
+									titlePosition : "inside", // "float", "outside", "inside" or "over"
+									titleFormat : null,
+									titleFromAlt : false,
+							
+									transitionIn : "fade", // "elastic", "fade" or "none"
+									transitionOut : "fade", // "elastic", "fade" or "none"
+							
+									speedIn : 300,
+									speedOut : 300,
+							
+									changeSpeed : 300,
+									changeFade : "fast",
+							
+									easingIn : "swing",
+									easingOut : "swing",
+							
+									showCloseButton	 : false,
+									showNavArrows : true,
+									enableEscapeButton : true,
+									enableKeyboardNav : true,
+							
+									onStart : function(){},
+									onCancel : function(){},
+									onComplete : function(){
+										 tinyMCE.init({
+											 //123
+											mode : "textareas",
+											editor_selector : "wysiwyg",
+											theme : "advanced",
+											elements : "ajaxfilemanager",
+											convert_urls: false,
+											language: "ru",
+											width: "100%",
+											plugins : "fullscreen,table,advimage,advlink,media,contextmenu,paste,template,inlinepopups",
+											theme_advanced_buttons2_add : "media,liststyle,fullscreen, pasteword",
+											theme_advanced_buttons3_add : "tablecontrols,|emotions,images,|,template",
+											theme_advanced_toolbar_location : "top",
+											theme_advanced_toolbar_align : "left",
+											theme_advanced_statusbar_location : "bottom",
+											theme_advanced_resizing : true,
+								
+											skin : "o2k7",
+					@mail.ru						skin_variant : "silver",
+								
+											content_css: "/themes/styles/screen-tinymce.css?1",
+								
+											plugin_insertdate_dateFormat : "%d.%m.%Y",
+											plugin_insertdate_timeFormat : "%H:%M:%S",
+											//template_external_list_url : "js/template_list.js",
+											external_link_list_url : "js/link_list.js",
+											external_image_list_url : "js/image_list.js", 
+											media_external_list_url : "js/media_list.js",
+											file_browser_callback : "ajaxfilemanager",
+											extended_valid_elements : "h1[*],p[*],H1[*],h2[*],H2[*],h3[*],H3[*],h4[*],H5[*],h6[*],H6[*],td[*],tr[*],th[*],table[*],tbody[*],hr[*],font[*],span[*],div[*],a[*],strong[*],small[*],em[*],ul[*],li[*]",
+											theme_advanced_resize_horizontal : true,
+											apply_source_formatting : true,
+											paste_strip_class_attributes : "all",
+											paste_remove_styles : true,
+											template_replace_values : {
+												username : "Some User",
+												staffid : "991234"
+											},
+											style_formats : [
+												{title: "Большой заголовок", block: "p", classes: "font_big_head" },
+												{title: "Мелкий текст", inline: "span", classes: "font_mini", split: false},
+												{title: "Бардовый разделитель", selector: "hr", classes: "sub_hr"},
+												{title: "ФИО", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a,hr", classes: "name-color"},
+												{title: "Картинка слева", selector: "p,img,hr", classes: "float-right"},
+												{title: "Картинка справа", selector: "p,img,hr", classes: "float-left"},
+												{title: "Серый блок", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a", classes: "gray-radius-block"},
+												{title: "Выделенная строка (Медовый цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_honey"},
+												{title: "Выделенная строка (Брусничный цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_berry"},
+												{title: "Выделенная ячейка", selector: "table.nsau_table td", classes: "td_highlight"},
+												{title: "Стилизованная таблица НГАУ", selector: "table", classes: "nsau_table"},
+											],
+											template_templates: [
+												{title: "Карточка персоны", src: "/themes/template/person_card.html", description: "Карточка с выравниванием картинки по левой стороне"},
+												{title: "Новинка", src: "/themes/template/nova.html", description: "Выделение красным цветом новинки"},
+												{title: "Спойлер", src: "/themes/template/spoil.html", description: "JS для спойлера"}
+																		]
+										}); 
+										$.fancybox.center();
+										
+										$("#fancybox-outer .mceResize").live("mousedown",function() {
+											$("#fancybox-outer .mceResize").live("mouseup",function() {
+												$.fancybox.center();
+											});
+										});				
+									},
+									onCleanup : function(){},
+									onClosed : function(){},
+									onError : function(){}
+								});
+							}
+						});
+					} else {
+						
+					}
+					return false;
+				});
+			};
+			ModalEdit(1);
+		});
+	</script>
+ <script>
+   jQuery(document).ready(function(){
+   jQuery("#menunav ul li").click(function () {
+    jQuery(this).children().toggle();
+    });
+     });@mail.ri
+  </script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+// Виджет кнопки вверх/вниз
+// Версия 2.0
+
+// jQuery('body').append('<div class="button-up" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: 0px;bottom: 0px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_up.png">наверх</div><div class="button-bottom" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: 0px;bottom: 0px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_bottom.png"><br/>вниз</div>');
+
+jQuery('body').append('<div class="button-up" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: -10px;bottom: 55px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_up_2.png"></div><div class="button-bottom" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: -10px;bottom: 20px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_bottom_2.png"><br/></div>');
+
+jQuery(window).scroll(function ()
+{
+	if (jQuery(this).scrollTop () > 250)
+	{
+		jQuery('.button-up').fadeIn();
+		//jQuery('.button-bottom').fadeOut();
+	}
+	else if (jQuery(this).scrollTop () < 250)
+	{
+		jQuery('.button-bottom').fadeIn();
+		jQuery('.button-up').fadeOut();
+	}
+	if(jQuery(window).scrollTop()+jQuery(window).height()>=jQuery(document).height())
+	{
+	    jQuery('.button-bottom').fadeOut();
+	}
+});
+
+ fseffefse@intel.com
+
+
+ awdawdwadawdawd@intel.com
+jQuery('.button-up').click(function(){
+jQuery('body,html').animate({
+scrollTop: 0
+}, 800);
+return false;
+});
+jQuery('.button-bottom').click(function(){
+jQuery('body,html').animate({scrollTop:jQuery(document).height()}, 800);
+return false;
+});
+
+jQuery('.button-up,.button-bottom').hover(function() {
+jQuery(this).animate({
+'opacity':'1',
+}).css({'color':'#9c0605'});
+}, function(){
+jQuery(this).animate({
+'opacity':'0.7'
+}).css({'color':'#9c0605'});;
+});
+
+
+
+});
+
+</script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="/themes/styles/contentrotator.css" media="screen" />
+	<script type="text/javascript" src="/scripts/jquery_min.js"></script>
+	<script src="/scripts/jquery-ui-personalized-1.5.3.packed.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#rotator > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 4000, true);
+		});
+	</script>
+<!-- Разобраться, добавить в файл стилей -->
+  <style type="text/css">
+   div.header_msg {
+		width: 40%;
+		text-align: center;
+	    height: 200px;
+	    position: absolute;
+	    top: 40%;
+	    left: 30%;
+		z-index: 100;
+	 }
+  </style>
+
+</head>
+<body>
+<!-- Выяснить, работает ли это вообще. При необходимости отключить -->
+    <div id="nofooter">
+		<div class="menu_background">
+			<div class="office_menu">
+						<ul class="user_menu">
+				<li>
+					<a style="text-decoration:none" title="" class="">
+						<span><span></span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/people/3890781" title="Бабушкин Владимир Игоревич" class="authorized_user">
+						<span><span>Бабушкин Владимир Игоревич</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/" title="Личный кабинет" class="">
+						<span><span>Личный кабинет</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/logout/" title="Выход из системы" class="">
+						<span><span>Выход</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/apply-support/" title="Отправить заявку в ЦИТ" class="">
+						<span><span>Заявка в ЦИТ</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="http://nsau.edu.ru/mail/" title="Корпоративная почта" class="">
+						<span><span>Корпоративная почта</span></span>
+					</a>
+				</li>
+			</ul>
+					
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--div id="page_title2"><div><span><a href="https://nsau.edu.ru/department/commission/">Приемная комиссия</a></span><br/>(383) 347-41-14</div></div-->
+		    <div id="header" class="header">
+<!-- Лого -->
+				<a id="logo" class="header__logo" href="/">
+					<span><span>&nbsp;</span></span>
+				</a>
+			
+ 
+ </style>
+<div class="header-block">
+	 <div class="header-icon-block header-block__item">
+	 	<a href="/en/" class="social-link link-en"><div class="social-link__icon">EN</div></a>
+	 	<a href="https://vk.com/nsau_press" class="social-link" title="Официальная страница Vkontakte" target="_blank">
+	 		<img src="/themes/images/vk.png" alt="Вконтакте Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://www.instagram.com/nsau_press/" class="social-link" title="Официальная страница Instagram" target="_blank">
+	 		<img src="/themes/images/instagram.png" alt="Instagram Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://t.me/ngaulife" class="social-link" title="Официальная страница Telegram" target="_blank">
+	 		<img src="/themes/images/telegram.png" alt="Телеграмм Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://www.youtube.com/channel/UCl6aOEZT9TxibaXzK7zIYXA" class="social-link" title="Официальная страница Youtube" target="_blank">
+	 		<img src="/themes/images/youtube.png" alt="Youtube Новосибирский ГАУ " class="social-link__icon">
+	 	</a>
+	 	<a href="/map/" class="social-link" title="Карта сайта">
+	 		<img src="/themes/images/site-map.png" alt="Карта сайта" class="social-link__icon">
+	 	</a>
+	 	<a href="/vds/" class="social-link" itemprop="copy" title="Версия сайта для слабовидящих">
+	 		<img src="/themes/images/eye.png" alt="Версия сайта для слабовидящих" class="social-link__icon">
+	 	</a>
+	 </div>
+					
+	<!-- Поиск по сайту -->
+	<!--  -->
+					<div  id="login_search" class="header__search header-block__item">
+													<!--a href="" /><div class="tasks_count warning"></div></a-->
+						<form id="FormSearch" method="get" action="/search/" accept-charset="UTF-8">
+						  <input type="search" name="search" placeholder="Поиск по сайту">
+						  <button type="submit" class="submit" type="submit" value="Искать"></button>
+						</form>
+					
+							
+			    </div>
+</div>
+ 
+		    
+		     </div>
+		    <!--header-->
+		    <!-- Главное меню -->
+		    	<div id="header_menu">
+									<ul>
+					<li>
+						<a href="/about/"  title="О вузе">
+							О вузе						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/abitur/"  title="Добро пожаловать в наш университет">
+							Абитуриенту						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/student/"  title="Студенту">
+							Студенту						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/nir/"  title="Научно-исследовательская работа">
+							Наука						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/library/"  title="Библиотека университета">
+							Библиотека						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/directory/"  title="В помощь преподавателю">
+							Преподавателю						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/sveden/"  title="Сведения об образовательной организации">
+							Сведения об образовательной организации						<span></span><span></span>
+						</a>
+					</li>
+				</ul>
+					<div id="menu_left_bg">&nbsp;</div>
+				</div>	
+		    <div id="content">
+	
+				<div class="left_cont"><!-- Left Cont -->
+
+				<p style="padding: 0px 0px 0px 0px;"><a href="https://svoefermerstvo.ru/organization/4895" title="Маркетплейс &laquo;Своё Фермерство&raquo;" laquo="" raquo="" target="_blank"><img style="margin: 0px 0px 7px 0px; box-shadow: #c2c2c2 5px 5px 10px;" title="Маркетплейс &laquo;Своё Фермерство&raquo;" src="https://nsau.edu.ru/images/Banner_na_sai.jpg" alt="Маркетплейс &laquo;Своё Фермерство&raquo;" width="290" height="112" /></a></p>
+<p style="padding-top: 0px; margin-top: 0px;"><a href="/department/ustojchivyj-universitet/" target="_blank"><img style="margin-bottom: 7px; box-shadow: #c2c2c2 5px 5px 10px;" title="Устойчивый университет" src="/images/_УУ.png" alt="Устойчивый университет" width="290" /></a></p>
+<p style="padding-top: 0px; margin-top: 1px; margin-bottom: 3px;"><a href="/abitur/" target="_blank"><img style="margin-top: 0px; margin-bottom: 7px; box-shadow: #c2c2c2 0px 0px 5px;" title="Приемная комиссия НГАУ" src="http://nsau.edu.ru/images/pk_01.jpg" alt="Приемная комиссия НГАУ" width="290" height="50" /></a></p>
+<div style="margin-bottom: 16px;"><a href="/news/80771.html" title="АгроНТИ-2021 пройдет на площадке Новосибирского ГАУ"><img style="box-shadow: #c2c2c2 0px 0px 10px;" title="Новосибирский ГАУ - региональная площадка АгроНТИ-2021" src="https://nsau.edu.ru/images/%20НТИ.jpg" alt="Новосибирский ГАУ - региональная площадка АгроНТИ-2021" width="290" height="73" /></a></div>
+<p style="padding-top: 0px; margin-top: 0px;"><a href="https://nsau.edu.ru/about/rekvizity/" target="_blank"><img style="margin-top: 0px; margin-bottom: 7px; box-shadow: #c2c2c2 5px 5px 10px;" title="Реквизиты для оплаты обучения" src="https://nsau.edu.ru/images/%20обучения_1.png" alt="Реквизиты для оплаты обучения" width="290" height="70" /></a></p>
+<p style="padding-top: 0px;"><a href="/about/kampusnaya-karta/" target="_blank"><img style="margin-top: 0px; box-shadow: #c2c2c2 0px 0px 5px;" title="Кампусная карта" src="/images/kampus.png" alt="Кампусная карта" width="290" height="80" /></a></p>			<ul class="drop_vert_menu">
+								<li class="dropdown-top">
+														<a href="/about/personnel/" title="Сведения об руководстве вуза" class="dropdown-top">
+														<span>Ректорат							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+									</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Факультеты и институты<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/agro/" class=""  title="Агрономический факультет">Агрономический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/biotech/" class=""  title="Биолого-технологический факультет">Биолого-технологический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/vetfac/" class=""  title="Факультет ветеринарной медицины">Факультет ветеринарной медицины</a>
+														</li>
+								<li id="drop" >
+									<a href="/mechfac/" class=""  title="Инженерный институт">Инженерный институт</a>
+														</li>
+								<li id="drop" >
+									<a href="/econ/" class=""  title="Факультет экономики и управления">Факультет экономики и управления</a>
+														</li>
+								<li id="drop" >
+									<a href="/law/" class=""  title="Юридический факультет">Юридический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/spo-fac/" class=""  title="Факультет среднего профессионального образования НГАУ">Факультет среднего профессионального образования НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/izop/" class=""  title="Заочное образование">Заочное образование</a>
+														</li>
+								<li id="drop" >
+									<a href="/idpo/" class=""  title="Институт дополнительного профессионального образования">Институт дополнительного профессионального образования</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/depart_teaching/" class=""  title="Отдел по подготовке научно-педагогических кадров">Отдел по подготовке научно-педагогических кадров</a>
+														</li>
+								<li id="drop" >
+									<a href="/kainsk/" class=""  title="Куйбышевский сельскохозяйственный техникум">Куйбышевский сельскохозяйственный техникум</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Филиалы<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/tomsk/" class=""  title="Томский сельскохозяйственный институт – филиал НГАУ">Томский сельскохозяйственный институт</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Учебные и ресурсные центры<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/abitur/preparation/" class=""  title="Центр довузовской подготовки">Центр довузовской подготовки</a>
+														</li>
+								<li id="drop" >
+									<a href="/ct-ngau/" class=""  title="Центр тестирования НГАУ">Центр тестирования НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/lc-perfekt/" class=""  title="Лингвистический центр Перфект">Лингвистический центр Перфект</a>
+														</li>
+								<li id="drop" >
+									<a href="/landscape/" class=""  title="Ландшафтный центр">Ландшафтный центр</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/agro/esm/" class=""  title="">Учебно-производственное хозяйство «Сад Мичуринцев»</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Внеучебные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/" class=""  title="">Отдел по внеучебной и воспитательной работе</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/obedinennyj-sovet-obuchayuschikhsya/" class=""  title="">Объединенный Совет обучающихся</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/studencheskie-otryady/shtab-so/" class=""  title="">Штаб СО НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/profkom/" class=""  title="Профком студентов">Профком студентов</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/stud-club/" class=""  title="Студенческий клуб">Студенческий клуб</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/sportivnyj-klub/" class=""  title="Спортивный клуб">Спортивный клуб</a>
+														</li>
+								<li id="drop" >
+									<a href="https://nsau.edu.ru/ssk/" class=""  title="">ССК «Международник»</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/volunteer/" class=""  title="Волонтёрский центр">Волонтёрский центр</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Административные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="http://nsau.edu.ru/about/uchyonyj-sovet/" class=""  title="">Ученый совет</a>
+														</li>
+								<li id="drop" >
+									<a href="https://nsau.edu.ru/about/uni-econ/struktura/" class=""  title="">Бухгалтерия</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/hr-dep/" class=""  title="Отдел кадров">Отдел кадров</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/o-del/" class=""  title="Отдел делопроизводства">Отдел делопроизводства</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/peo/" class=""  title="Планово-экономический отдел">Планово-экономический отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/dogovornoj-otdel/" class=""  title="Отдел договорных и имущественных отношений">Отдел договорных и имущественных отношений</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/voenuch-dep/" class=""  title="Военно-учётный стол">Военно-учётный стол</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/uchotdel/" class=""  title="Учебный отдел">Учебный отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/record_student/" class=""  title="Отдел по учёту студентов">Отдел по учёту студентов</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/practice_placement/" class=""  title="Отдел практик и трудоустройства">Отдел практик и трудоустройства</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/quality/" class=""  title="Отдел по качеству образовательной деятельности (НК-342)">Отдел по качеству образовательной деятельности</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/ot-tb-dep/" class=""  title="Служба охраны труда">Служба охраны труда</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/shtab-go-i-chs/" class=""  title="Штаб ГО и ЧС">Штаб ГО и ЧС</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/akhch/" class=""  title="Административно-хозяйственная часть">Административно-хозяйственная часть</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/yur/" class=""  title="Юридический отдел">Юридический отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/pervyj-otdel/" class=""  title="Первый отдел">Первый отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/cit/" class=""  title="Центр информационных технологий">Центр информационных технологий</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/commission/" class=""  title="Приёмная комисcия">Приёмная комисcия</a>
+														</li>
+								<li id="drop" >
+									<a href="/popechitelskij-sovet/" class=""  title="Попечительский совет универститета">Попечительский совет</a>
+														</li>
+								<li id="drop" >
+									<a href="/unoko/" class=""  title="Отдел по профессионально-общественной аккредитации">Отдел по профессионально-общественной аккредитации</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/profkom-sotrudnikov/" class=""  title="Профком сотрудников">Профком сотрудников</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Научные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/nir/depart_science/" class=""  title="Научно-исследовательская часть">Научно-исследовательская часть</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/o-nich/" class=""  title="Отдел по инновационно-внедренческой деятельности">Отдел по инновационно-внедренческой деятельности</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/ocpmntrapk/" class=""  title="Отраслевой центр прогнозирования и мониторинга научно-технологического развития АПК">Отраслевой центр прогнозирования и мониторинга научно-технологического развития АПК</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/ilk/" class=""  title="Испытательный лабораторный комплекс - Испытательный центр">Испытательный лабораторный комплекс - Испытательный центр</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/sovet-molodykh-uchyonykh/" class=""  title="Совет молодых учёных">Совет молодых учёных</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/incubator/" class=""  title="Бизнес-инкубатор">Бизнес-инкубатор</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/nir/publishing/" class=""  title="">Издательский центр НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/nir/centr-kollektivnogo-polzovaniya-nauchnym-oborudovaniem/" class=""  title="">Испытательный центр межфакультетской научной лаборатории</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/o-nich/vystavochnyj-kompleks/" class=""  title="Выставочный комплекс">Выставочный комплекс</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+														<a href="/department/international/" title="Международная деятельность" class="dropdown-top">
+														<span>Международная деятельность							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+									</li>
+			</ul>
+		<div class="translation">
+			<a href=/webcast/><img src=/themes/images/logo_camera.png><span class="translation_text">Видеотрансляция событий</span></a>
+		</div>
+		
+	<div class="announce_tabs_container">
+		<ul class="tabs">
+			<li class="current">Анонсы</li>
+			<li>Объявления</li>
+			<li>События</li>
+		</ul>
+		<div class="box2 visible">
+		  
+			<div class="event_block">
+				<div class="event_block_date">
+					<p>20<br><span>дек.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/86851.html">VI Всероссийская (национальная) научная конференция «Роль аграрной науки в устойчивом развитии сельских территорий»</a></p>
+					
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		  
+			<div class="event_block">
+				<div class="event_block_date">
+					<p>09<br><span>фев.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/88531.html">XVII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «АГРАРНАЯ НАУКА – СЕЛЬСКОМУ ХОЗЯЙСТВУ»</a></p>
+					
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 		</div>
+		<div class="box2">
+		 		</div>
+		<div class="box2">
+		 			<div class="event_block">
+				<div class="event_block_date">
+					<p>20<br><span>дек.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/86851.html">VI Всероссийская (национальная) научная конференция «Роль аграрной науки в устойчивом развитии сельских территорий»</a></p>
+					<p><a href="/news/category/7">Конференции и семинары</a></p>
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 			<div class="event_block">
+				<div class="event_block_date">
+					<p>09<br><span>фев.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/88531.html">XVII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «АГРАРНАЯ НАУКА – СЕЛЬСКОМУ ХОЗЯЙСТВУ»</a></p>
+					<p><a href="/news/category/7">Конференции и семинары</a></p>
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 		</div>
+	</div>
+					</div><!-- End Left Cont -->
+				<div class="center_cont">
+					<div class="cn"><!-- Center Cont -->
+					
+
+						<div class="" id="news_annonse">
+		<!--h1>
+		<a href="/news/" title="Читать все новости">Новости</a>
+	</h1-->
+
+						<script src="/scripts/jquery.dotdotdot.min.js" type="text/javascript"></script>
+
+	<div id="newscat1" class="newscat">
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/87841.html" title="Читать подробнее"><img src="/images/news/87841_tn.jpg" alt="Неделя открытых дверей Новосибирского ГАУ online" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">23.11</div>
+					
+				<div class="noticeTitle"><a href="/news/87841.html" title="Читать подробнее">Неделя открытых дверей Новосибирского ГАУ online</a></div>
+				<div class="shortText" id=auto_cut_1><p>Неделя открытых дверей Новосибирского ГАУ online пройдет в новом формате с 29 ноября по 3 декабря.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/87841.html" title="Читать подробнее">Неделя открытых дверей Новосибирского ГАУ online</a></div>
+					<div class="shortText"><p>Неделя открытых дверей Новосибирского ГАУ online пройдет в новом формате с 29 ноября по 3 декабря.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/85801.html" title="Читать подробнее"><img src="/images/news/85801_tn.jpg" alt="Программа «Пушкинская карта 2021» стартует в Новосибирской области" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.09</div>
+					
+				<div class="noticeTitle"><a href="/news/85801.html" title="Читать подробнее">Программа «Пушкинская карта 2021» стартует в Новосибирской области</a></div>
+				<div class="shortText" id=auto_cut_2><p>Теперь, любой гражданин России в возрасте от 14 до 22 лет может посещать музеи и театры по госпрограмме &laquo;Пушкинская карта 2021&raquo;.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/85801.html" title="Читать подробнее">Программа «Пушкинская карта 2021» стартует в Новосибирской области</a></div>
+					<div class="shortText"><p>Теперь, любой гражданин России в возрасте от 14 до 22 лет может посещать музеи и театры по госпрограмме &laquo;Пушкинская карта 2021&raquo;.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88581.html" title="Читать подробнее"><img src="/images/news/88581_tn.jpg" alt="Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">15.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88581.html" title="Читать подробнее">Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов</a></div>
+				<div class="shortText" id=auto_cut_3><p>В городе Воронеж прошел Всероссийский конкурс профессионального мастерства среди сельскохозяйственных студенческих отрядов</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88581.html" title="Читать подробнее">Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов</a></div>
+					<div class="shortText"><p>В городе Воронеж прошел Всероссийский конкурс профессионального мастерства среди сельскохозяйственных студенческих отрядов</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88571.html" title="Читать подробнее"><img src="/images/news/88571_tn.jpg" alt="«Вкусная пятница» в Новосибирском ГАУ" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">15.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88571.html" title="Читать подробнее">«Вкусная пятница» в Новосибирском ГАУ</a></div>
+				<div class="shortText" id=auto_cut_4><p>&laquo;Вкусная пятница&raquo; &ndash; новый, интересный проект от Россельхозбанка, целью которого является, продвижение натуральных фермерских продуктов среди населения в ходе проведения которого посетители приобретают продукты напрямую у поставщика без наценок и надбавок.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88571.html" title="Читать подробнее">«Вкусная пятница» в Новосибирском ГАУ</a></div>
+					<div class="shortText"><p>&laquo;Вкусная пятница&raquo; &ndash; новый, интересный проект от Россельхозбанка, целью которого является, продвижение натуральных фермерских продуктов среди населения в ходе проведения которого посетители приобретают продукты напрямую у поставщика без наценок и надбавок.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88541.html" title="Читать подробнее"><img src="/images/news/88541_tn.jpg" alt="С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">14.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88541.html" title="Читать подробнее">С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO</a></div>
+				<div class="shortText" id=auto_cut_5><p>В целях расширения профессиональных компетенций обучающихся Новосибирский ГАУ осуществляет долгосрочное сотрудничество с союзом LOGO по реализации практической подготовки студентов на базе ведущих экологических хозяйств Германии.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88541.html" title="Читать подробнее">С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO</a></div>
+					<div class="shortText"><p>В целях расширения профессиональных компетенций обучающихся Новосибирский ГАУ осуществляет долгосрочное сотрудничество с союзом LOGO по реализации практической подготовки студентов на базе ведущих экологических хозяйств Германии.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews orange'><a href='/news/category/1'>Международная деятельность</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88521.html" title="Читать подробнее"><img src="/images/news/88521_tn.jpg" alt="Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88521.html" title="Читать подробнее">Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей</a></div>
+				<div class="shortText" id=auto_cut_6><p><em>8 декабря 2021 года в Инновационном центре &laquo;Сколково&raquo; завершился Всероссийский конкурс молодых технологических предпринимателей, организованный Министерством науки и высшего образования РФ при поддержке Фонда &laquo;Сколково&raquo; (Группа ВЭБ.РФ). </em></p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88521.html" title="Читать подробнее">Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей</a></div>
+					<div class="shortText"><p><em>8 декабря 2021 года в Инновационном центре &laquo;Сколково&raquo; завершился Всероссийский конкурс молодых технологических предпринимателей, организованный Министерством науки и высшего образования РФ при поддержке Фонда &laquo;Сколково&raquo; (Группа ВЭБ.РФ). </em></p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews coral'><a href='/news/category/12'>Наука и инновации</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88511.html" title="Читать подробнее"><img src="/images/news/88511_tn.jpg" alt="В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88511.html" title="Читать подробнее">В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»</a></div>
+				<div class="shortText" id=auto_cut_7><p>Материалы конференции будут <strong>&nbsp;</strong>изданы в виде сборника трудов,&nbsp; размещены на сайте Башкирского ГАУ и в наукометрической базе данных РИНЦ (научной электронной библиотеке eLIBRARY.RU) с присвоением публикациям цифровых идентификаторов DOI.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88511.html" title="Читать подробнее">В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»</a></div>
+					<div class="shortText"><p>Материалы конференции будут <strong>&nbsp;</strong>изданы в виде сборника трудов,&nbsp; размещены на сайте Башкирского ГАУ и в наукометрической базе данных РИНЦ (научной электронной библиотеке eLIBRARY.RU) с присвоением публикациям цифровых идентификаторов DOI.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88431.html" title="Читать подробнее"><img src="/images/news/88431_tn.jpg" alt="В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88431.html" title="Читать подробнее">В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий</a></div>
+				<div class="shortText" id=auto_cut_8><p><em>II</em><em> Всероссийская научно-практическая конференция молодых ученых &laquo;Устойчивое развитие сельских территорий&raquo; прошла 10 декабря на базе Пространства коллективной работы &laquo;Точка кипения НГАУ&raquo; в гибридном формате. Участие в работе конференции приняли студенты, магистранты и аспиранты крупнейших образовательных центров Сибири и Поволжья, а также представители высших учебных заведений республики Беларусь. </em></p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88431.html" title="Читать подробнее">В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий</a></div>
+					<div class="shortText"><p><em>II</em><em> Всероссийская научно-практическая конференция молодых ученых &laquo;Устойчивое развитие сельских территорий&raquo; прошла 10 декабря на базе Пространства коллективной работы &laquo;Точка кипения НГАУ&raquo; в гибридном формате. Участие в работе конференции приняли студенты, магистранты и аспиранты крупнейших образовательных центров Сибири и Поволжья, а также представители высших учебных заведений республики Беларусь. </em></p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+			</div>
+
+	<div class="clear"></div>
+	<a href="/news/" title="Читать все новости" class="allNews">
+				Все новости			</a>
+							
+						</div>
+		<a onclick="show()" id="show_sub"><img src="themes/images/subs.png"/>Подписаться на новости</a>
+		<div class="clear"></div>
+
+			<div id="subscribe_form" style="display:none;">
+				<form action="/" method="post">
+					<fieldset>
+						
+												<p>                   
+							<input type="text" size="20" name="164[subscribe][email]" value="ваш e-mail" onclick="this.value='';" onblur="if(!this.value) this.value='ваш e-mail';" />
+							<script src='https://www.google.com/recaptcha/api.js'></script>
+							<div class="g-recaptcha" data-sitekey="6LevLxMUAAAAAKcz_AZOCeKpx92QXDBVD79wcWd5"></div>
+							<input type="submit" value="Готово" class="button" />
+						</p>
+
+						<a href="unsubscribe/">Отписаться от новостей</a>
+					</fieldset>
+				</form>
+			</div>
+
+		<script type='text/javascript'>
+    	function show()
+    	{
+        	if (document.getElementById('subscribe_form').style.display == 'block') 
+       		{
+            	document.getElementById('subscribe_form').style.display = 'none';
+        	} else 
+        	{
+           		 document.getElementById('subscribe_form').style.display = 'block';
+        	}
+    	}
+		</script>
+
+				<div class="announce_tabs_container linksNew">
+<div></div>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 70%;">
+<div>СМИ</div>
+<p><a href="/nir/herald/">Научный журнал &laquo;Вестник НГАУ&raquo;</a><br /><a href="/vestnik/">Газета &laquo;Вестник аграрного университета&raquo;</a><br /><a href="/bulletin/">Информационный бюллетень НГАУ</a><br /><a href="/profed/">Научный журнал &laquo;Профессиональное образование в современном мире&raquo;</a><br /><a href="/nir/zhurnal-innovacii-i-prod-bezopasnos/">Теоретический и научно-практический журнал &laquo;Инновации и продовольственная безопасность&raquo;</a></p>
+</td>
+<td><br />
+<div>Студенту</div>
+<p><a href="/vacancies/">Вакансии для выпускников</a><br /><a href="/studtv/2017/">Студенческое телевидение</a><br /><a href="/department/cit/matbase/wi-fi/">Зоны доступа Wi-Fi</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>					</div>
+				</div><!-- End Center Cont $EE["modules_data"]["people_menu"] || -->
+				<div class="clear">&nbsp;</div>
+		    </div><!--content-->
+			
+			
+			
+			
+	                        <!-- slider  -->
+    <div class="wmuSlider example3">
+        <div class="wmuSliderWrapper">
+
+
+            <article>
+            <a href="http://mcx.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/03_1.PNG" />
+                <div class="capt">Минсельхоз РФ</div>
+            </a>
+            </article>
+
+             <article>
+                <a href="http://www.fsvps.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/22.PNG" />
+                <div class="capt">Россельхознадзор</div>
+                </a>
+            </article>
+
+            <article>
+            <a href="https://minobrnauki.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/02.PNG" />
+                  <div class="capt">Минобрнауки</div>
+             </a>
+            </article>
+
+            <article>
+            <a href="http://obrnadzor.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/01.PNG" />
+                <div class="capt">Рособрнадзор</div>
+               </a>
+            </article>
+            <article>
+            <a href="http://rostrud.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/05.PNG" />
+                <div class="capt">Роструд</div>
+            </a>
+            </article>
+              <article>
+            <a href="http://mcx.nso.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/logo_nsk_2.jpg" />
+                <div class="capt">Минсельхоз НСО</div>
+            </a>
+            </article>
+
+            <article>
+                <a href="http://zakupki.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/20.PNG" />
+                <div class="capt">Госзакупки</div>
+                </a>
+            </article>
+
+            <article>
+            <a href="http://agrovuz.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/07.PNG" />
+                <div class="capt">Агровуз</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://rssm.su/" target="_blank">
+                <img class="slider_img" src="images/slider/16_1.PNG" />
+                <div class="capt_small">РССМ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/09.PNG" />
+                <div class="capt_small">Российское образование</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://window.edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/10.PNG" />
+                <div class="capt_small">Единое окно</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://fcior.edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/12.PNG" />
+                <div class="capt_small">Федеральный центр ИОР</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://scienceport.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/14.PNG" />
+                <div class="capt_small">Наука и образование против террора</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://нцпти.рф/" target="_blank">
+                <img class="slider_img" src="images/slider/15.PNG" />
+                <div class="capt_small">НЦПТИ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://spo.wil.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/19.PNG" />
+                <div class="capt_small">Поддержка инклюзивного образования</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://pravo.minjust.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/5mm.jpg" />
+                <div class="capt_small">НПА РФ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://vayenshtefan.ru/" target="_blank">
+                <img class="slider_img" style="margin-top: 10px;" src="images/slider/23.gif" />
+                <div class="capt_small" style="margin-top: 5px;">СМИ Вайенштефан</div>
+            </a>
+            </article>
+             <article>
+            <a href="http://rcmp-nso.ru" target="_blank">
+                <img class="slider_img" style="margin-top: 10px;" src="images/slider/rpmi.jpg" />
+                <div class="capt_small" style="margin-top: 5px;">РЦМП</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://www.avroradg.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/24.png" />
+                <div class="capt_small" style="margin-top: 5px;">СЭД Аврора</div>
+            </a>
+            </article>
+              
+            <article>
+            <a href="https://xn--2020-k4dg3e.xn--p1ai/" target="_blank">
+                <img class="slider_img" src="images/slider/year2020.png" />
+                <div class="capt">Год памяти и славы - 2020</div>
+            </a>
+            </article>         
+<!--             <article>
+                <a href="">
+                <img class="slider_img" src="images/slider/06.PNG" />
+                <div class="capt">ВЖУХ!</div>
+                </a>
+            </article> -->
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/jquery.wmuSlider.min.js"></script>
+    <link rel="stylesheet" href="themes/styles/slider.css" type="text/css" media="screen" />
+    <script>
+        if( screen.width <= 1024 )
+        {
+            var items = 2;
+        }
+        else
+        {
+            var items = 5;
+        }
+        $('.example3').wmuSlider(
+        {
+            touch: Modernizr.touch,
+            animation: 'slide',
+                        slideshow: false,
+            items: items
+        });
+    </script>
+    <!-- end slider -->
+        		</div>
+
+		<div id="footer-pusher">&nbsp;</div>
+    	</div>
+    	<!--nofooter -->
+    	<div id="footer">    
+			<div class="wrapper">
+				<div id="main-counter">
+								</div>
+
+				<div id="copyright">
+					<div class="footer-left">
+						&copy;&nbsp;1998-2021 Новосибирский государственный аграрный университет <br>
+						630039, г. Новосибирск, ул. Добролюбова, 160<br/>
+						Свидетельство о регистрации СМИ <a href="http://nsau.edu.ru/images/about/smi_license.jpg">Эл №ФС77-43853 от 9 февраля 2011 года.</a>
+					</div>
+					<div class="footer-right">
+						<div class="age"><span class="age_limit">12+</span></div>
+						<a href="/support/"> Служба технической поддержки</a><br>
+						<a href="/department/commission/">Приемная комиссия</a>
+					</div>
+				</div>
+		</div>
+	
+    </div><!--footer--><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(7937029, "init", {
+        id:7937029,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/7937029" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
+
+<!DOCTYPE html> 
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="ru"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="ru"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="ru"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9" lang="ru"><![endif]-->
+<!--[if (gt IE 7)|!(IE)]><html lang="ru"><!--<![endif]-->
+<head>
+	<title>Новосибирский Государственный Аграрный Университет</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <meta name="description" content="Новосибирский государтвенный аграрный университет" />
+    <meta name="keywords" content="Аграрный университет Новосибирск" />
+      <meta http-equiv="imagetoolbar" content="no" />	 
+
+    
+    <link rel="icon" href="/themes/favicon2011.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/themes/favicon2011.ico" type="image/x-icon" />
+		<meta name='yandex-verification' content='771e5652e16b9536' />
+    <script type="text/javascript" src="/scripts/modernizr-2.0.6.min.js"></script>
+    	
+	<link rel="stylesheet" href="/themes/styles/screen_2011.css?1638861512" type="text/css" />
+	    <link rel="stylesheet" href="/themes/styles/ee.css" type="text/css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="/themes/styles/ie-fix.css" type="text/css" /><![endif]-->
+    <link rel="stylesheet" href="/themes/styles/jquery.fancybox-1.3.5.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/no-ie6.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/jquery-ui-1.8.2.custom.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/colorbox.css?1" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/select2.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/themes/styles/comment_form.css" type="text/css" />
+<link rel="apple-touch-icon" href="/themes/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/themes/images/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/themes/images/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/themes/images/touch-icon-ipad-retina.png">
+
+
+	<script type="text/javascript" src="/scripts/jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery/select2/select2.js"></script>
+		<script type="text/javascript" src="/scripts/highslide/highslide-with-gallery.js"></script>
+<script type="text/javascript">
+hs.graphicsDir = '/scripts/highslide/graphics/';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+hs.showCredits = false;
+hs.fullExpandTitle = 'Полный размер';
+hs.restoreTitle = 'Щелчок мышью закрывает изображение, клавиши-стрелки используются для перехода к предыдущему и следующему изображению';
+hs.loadingText = 'Загрузка&hellip;';
+hs.loadingTitle = 'Щёлкните мышью для отмены';
+hs.allowMultipleInstances = false;
+
+</script>
+	            <link rel="stylesheet" type="text/css" href="/scripts/tooltipster/dist/css/tooltipster.bundle.min.css" />
+            <link rel="stylesheet" type="text/css" href="/scripts/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" />
+            <script type="text/javascript" src="/scripts/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+            <script type='text/javascript'>
+                jQuery(document).ready(function($) {
+                    //подмена http на https
+                    let a = $(this).find("a[href^='http://nsau.edu.ru']");
+                    console.log(a.length);
+                    if (a.length > 0){
+                        a.each(function(){
+                            $(this).attr('href', $(this).attr('href').replace("http", "https"));
+                        });
+                    }
+
+                    let files = $(this).find(".sig_files");
+                    if (files.length > 0){
+                        let falseId = 1;
+                        files.each(function(){
+
+                            let el = $(this);
+                            let fileId = /\d+/.exec(el.attr('href'));
+
+                            if(fileId != null){
+
+                                //el.prepend('<span class="sig_' + falseId + '"></span>');
+                                el.before('<a class="sig_files" href="'+'/file/sig/' + fileId[0] + '" style="color: #fff!important; font-size: 15px;"><span class="sig_' + falseId + '"></span></a>');
+
+                                $('span.sig_'+ falseId).tooltipster({
+                                    theme: 'tooltipster-borderless',
+                                    interactive: true,
+                                    side: ['top'],
+                                    functionPosition: function(instance, helper, position){
+                                            position.coord.top -= 26;
+                                            //position.coord.left += 10;
+                                            return position;
+                                     },
+                                    contentAsHTML: true,
+                                    functionInit: function(instance, helper){
+                                        //поденить
+                                        //let content = '<a href="'+ location.protocol +'//'+ location.host +'/file/sig/' + fileId[0] + '" style="color: #fff!important; font-size: 15px;">Скачать ЭЦП </a>';
+                                        let content = 'Скачать ЭЦП';
+                                        // save the edited content
+                                        instance.content(content);
+                                    }
+                                });
+                                falseId++;
+                            }
+                        });
+				    }
+
+				    $('a.sig_with').tooltipster({
+                        theme: 'tooltipster-borderless',
+                        position: ['top'],
+                        functionPosition: function(instance, helper, position){
+                                position.coord.top -= 25;
+                                return position;
+                         },
+                        functionInit: function(instance, helper){
+                            $(helper.origin).prepend('<span></span>');;
+
+                            let content = 'Подписан ЭЦП';
+                            instance.content(content);
+                        }
+                    });
+
+                });
+             </script>
+				<script type="text/javascript" src="/scripts/jquery/jquery.fancybox-1.3.4.js"></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			//табы
+			$('ul.tabs').delegate('li:not(.current)', 'click', function() {
+				// var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				$(this).addClass('current').siblings().removeClass('current')
+							.parents('div.announce_tabs_container').find('div.box2').hide().eq($(this).index()).fadeIn(150);
+				// window.scrollTo(0,scrollTop);
+				// $("div.not_registered:first").removeClass("hidden");
+				// $("div.not_registered:last").addClass("hidden");
+			});
+		});
+	</script>
+
+	<script type="text/javascript" src="/scripts/no-ie6.js"></script>
+	<script type="text/javascript" src="/scripts/passgen.js"></script>
+	<script type="text/javascript" src="/scripts/renews.js"></script>
+	<script type="text/javascript" src="/scripts/tiny_mce/tiny_mce.js"></script>
+	
+		<script type="text/javascript">	
+					
+			tinyMCE.init({
+				// General options12 
+				mode : "textareas",
+		editor_selector : "wysiwyg",
+				theme : "advanced",
+        elements : "ajaxfilemanager",
+        convert_urls: false,
+				language: "ru",
+        width: "100%",
+				plugins : "fullscreen,table,advimage,advlink,media,contextmenu,paste,template,inlinepopups",
+	
+				// Theme options2
+				theme_advanced_buttons2_add : "media,liststyle,fullscreen, pasteword",
+				theme_advanced_buttons3_add : "tablecontrols,|emotions,images,|,template",
+				theme_advanced_toolbar_location : "top",
+				theme_advanced_toolbar_align : "left",
+				theme_advanced_statusbar_location : "bottom",
+				theme_advanced_resizing : true,
+	 theme_advanced_resize_horizontal : true,
+        apply_source_formatting : true,
+		paste_strip_class_attributes : "all",
+        paste_remove_styles : true,
+			paste_auto_cleanup_on_paste : true,
+			paste_remove_spans:true,	
+				// Skin options
+				skin : "o2k7",
+				skin_variant : "silver",
+	
+				// Example content CSS (should be your site CSS)
+				//content_css : "css/example.css",
+        content_css: "/themes/styles/screen-tinymce.css?1",
+	
+				// Drop lists for link/image/media/template dialogs
+        plugin_insertdate_dateFormat : "%d.%m.%Y",
+        plugin_insertdate_timeFormat : "%H:%M:%S",
+											extended_valid_elements : "h1[*],p[*],H1[*],h2[*],H2[*],h3[*],H3[*],h4[*],H5[*],h6[*],H6[*],td[*],tr[*],th[*],table[*],tbody[*],hr[*],font[*],span[*],div[*],a[*],strong[*],small[*],em[*],ul[*],li[*]",
+				//template_external_list_url : "js/template_list.js",
+				external_link_list_url : "js/link_list.js",
+				external_image_list_url : "",
+				flash_external_list_url : "js/flash_list.js",
+				media_external_list_url : "js/media_list.js",
+        file_browser_callback :  function ajaxfilemanager(field_name, url, type, win) {
+				var ajaxfilemanagerurl = "/scripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php?afm=00ac751cfa2b4a73c1a300a919f228ac";
+				switch (type) {
+					case "image":
+						break;
+					case "media":
+						break;
+					case "flash": 
+						break;
+					case "file":
+						break;
+					default:
+						return false;
+				}
+				tinyMCE.activeEditor.windowManager.open({
+					url: ajaxfilemanagerurl,
+					width: 782,
+					height: 440,
+					inline : "yes",
+					close_previous : "no"
+				},{
+					window : win,
+					input : field_name
+				});
+			},
+		//paste_use_dialog : false,
+		
+         theme_advanced_resize_horizontal : true,
+        apply_source_formatting : true,
+		paste_strip_class_attributes : "all",
+                paste_remove_styles : true,
+				// Replace values for the template plugin
+				/*template_replace_values : {
+					username : "Some User",
+					staffid : "991234"
+				},*/
+				style_formats : [
+					{title: "Большой заголовок", block: "p", classes: "font_big_head" },
+					{title: "Мелкий текст", inline: "span", classes: "font_mini", split: false},
+					{title: "Бордовый разделитель", selector: "hr", classes: "sub_hr"},
+					{title: "ФИО", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a,hr", classes: "name-color"},
+					{title: "Картинка слева", selector: "p,img,hr", classes: "float-right"},
+					{title: "Картинка справа", selector: "p,img,hr", classes: "float-left"},
+					{title: "Серый блок", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a", classes: "gray-radius-block"},
+					{title: "Выделенная строка (Медовый цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_honey"},
+					{title: "Выделенная строка (Брусничный цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_berry"},
+					{title: "Выделенная ячейка", selector: "table.nsau_table td", classes: "td_highlight"},
+					{title: "Стилизованная таблица НГАУ", selector: "table", classes: "nsau_table"},
+					{title: "Спойлер", selector: "li,div,ul,td", classes: "menunav"},
+				],
+				template_templates: [
+					{title: "Карточка персоны", src: "/themes/template/person_card.html", description: "Карточка с выравниванием картинки по левой стороне"},
+					{title: "Новинка", src: "/themes/template/nova.html", description: "Выделение красным цветом новинки"},
+					{title: "Спойлер", src: "/themes/template/spoil.html", description: "JS для спойлера"}
+					
+				]
+			});
+	
+			function ajaxfilemanager(field_name, url, type, win) {
+				var ajaxfilemanagerurl = "/scripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php?afm=39931f3bc166deaa8cd48714ba65bab7";
+				switch (type) {
+					case "image":
+						break;
+					case "media":
+						break;
+					case "flash": 
+						break;
+					case "file":
+						break;
+					default:
+						return false;
+				}
+				tinyMCE.activeEditor.windowManager.open({
+					url: ajaxfilemanagerurl,
+					width: 782,
+					height: 440,
+					inline : "yes",
+					close_previous : "no"
+				},{
+					window : win,
+					input : field_name
+				});
+			}
+		</script>
+	<script type="text/javascript" src="/scripts/app.js"></script>
+
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			ModalEdit = function(module_id) {
+				$("a.modal_edit").click(function() {
+					var $this = $(this);
+					var param = $(this).attr("href").split("?");
+					var uri = param[0];
+					if(param[1] != null) {
+						param = param[1].split("&");
+						for(var i = 0; i < param.length; i++) {
+							param[i] = param[i].split("=");
+						}
+					}
+					if((param[0] != null && param[0][0] == "node" && param[0][1]) && (param[1] && param[1][0] == "action" && param[1][1] == "edit#form") && (param[2] && param[2][0] == "mode" && param[2][1] == "modal")) {
+						var request = {"module": module_id, "mode": "html_code", "params": param[3][1], "uri": uri, "node": param[0][1], "action": param[1][1], "item_id": param[3][1]};
+						$.ajax({
+							type: "POST",
+							url: "/ajax_mode/", 
+							data: request,
+							success: function( data ) {
+								//ui.item.find("em.load").css("display", "none");
+								$.fancybox({
+									content: data,
+									padding : 17,
+									margin : 40,
+									opacity : false,
+									modal : false,
+									cyclic : false,
+									scrolling : "auto",	// "auto", "yes" or "no"
+							
+									//width : 560,
+									//height : 340,
+									autoWidth: true,
+							
+									autoScale : true,
+									autoDimensions : true,
+									centerOnScroll : false,
+							
+									ajax : {},
+									swf : { wmode: "transparent" },
+							
+									hideOnOverlayClick : true,
+									hideOnContentClick : false,
+							
+									overlayShow : true,
+									overlayOpacity : 0.76,
+									overlayColor : "#000",
+							
+									titleShow : true,
+									titlePosition : "inside", // "float", "outside", "inside" or "over"
+									titleFormat : null,
+									titleFromAlt : false,
+							
+									transitionIn : "fade", // "elastic", "fade" or "none"
+									transitionOut : "fade", // "elastic", "fade" or "none"
+							
+									speedIn : 300,
+									speedOut : 300,
+							
+									changeSpeed : 300,
+									changeFade : "fast",
+							
+									easingIn : "swing",
+									easingOut : "swing",
+							
+									showCloseButton	 : false,
+									showNavArrows : true,
+									enableEscapeButton : true,
+									enableKeyboardNav : true,
+							
+									onStart : function(){},
+									onCancel : function(){},
+									onComplete : function(){
+										 tinyMCE.init({
+											 //123
+											mode : "textareas",
+											editor_selector : "wysiwyg",
+											theme : "advanced",
+											elements : "ajaxfilemanager",
+											convert_urls: false,
+											language: "ru",
+											width: "100%",
+											plugins : "fullscreen,table,advimage,advlink,media,contextmenu,paste,template,inlinepopups",
+											theme_advanced_buttons2_add : "media,liststyle,fullscreen, pasteword",
+											theme_advanced_buttons3_add : "tablecontrols,|emotions,images,|,template",
+											theme_advanced_toolbar_location : "top",
+											theme_advanced_toolbar_align : "left",
+											theme_advanced_statusbar_location : "bottom",
+											theme_advanced_resizing : true,
+								
+											skin : "o2k7",
+											skin_variant : "silver",
+								
+											content_css: "/themes/styles/screen-tinymce.css?1",
+								
+											plugin_insertdate_dateFormat : "%d.%m.%Y",
+											plugin_insertdate_timeFormat : "%H:%M:%S",
+											//template_external_list_url : "js/template_list.js",
+											external_link_list_url : "js/link_list.js",
+											external_image_list_url : "js/image_list.js", 
+											media_external_list_url : "js/media_list.js",
+											file_browser_callback : "ajaxfilemanager",
+											extended_valid_elements : "h1[*],p[*],H1[*],h2[*],H2[*],h3[*],H3[*],h4[*],H5[*],h6[*],H6[*],td[*],tr[*],th[*],table[*],tbody[*],hr[*],font[*],span[*],div[*],a[*],strong[*],small[*],em[*],ul[*],li[*]",
+											theme_advanced_resize_horizontal : true,
+											apply_source_formatting : true,
+											paste_strip_class_attributes : "all",
+											paste_remove_styles : true,
+											template_replace_values : {
+												username : "Some User",
+												staffid : "991234"
+											},
+											style_formats : [
+												{title: "Большой заголовок", block: "p", classes: "font_big_head" },
+												{title: "Мелкий текст", inline: "span", classes: "font_mini", split: false},
+												{title: "Бардовый разделитель", selector: "hr", classes: "sub_hr"},
+												{title: "ФИО", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a,hr", classes: "name-color"},
+												{title: "Картинка слева", selector: "p,img,hr", classes: "float-right"},
+												{title: "Картинка справа", selector: "p,img,hr", classes: "float-left"},
+												{title: "Серый блок", selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,span,strong,img,table,a", classes: "gray-radius-block"},
+												{title: "Выделенная строка (Медовый цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_honey"},
+												{title: "Выделенная строка (Брусничный цвет)", selector: "table.nsau_table tr", classes: "tr_highlight_berry"},
+												{title: "Выделенная ячейка", selector: "table.nsau_table td", classes: "td_highlight"},
+												{title: "Стилизованная таблица НГАУ", selector: "table", classes: "nsau_table"},
+											],
+											template_templates: [
+												{title: "Карточка персоны", src: "/themes/template/person_card.html", description: "Карточка с выравниванием картинки по левой стороне"},
+												{title: "Новинка", src: "/themes/template/nova.html", description: "Выделение красным цветом новинки"},
+												{title: "Спойлер", src: "/themes/template/spoil.html", description: "JS для спойлера"}
+																		]
+										}); 
+										$.fancybox.center();
+										
+										$("#fancybox-outer .mceResize").live("mousedown",function() {
+											$("#fancybox-outer .mceResize").live("mouseup",function() {
+												$.fancybox.center();
+											});
+										});				
+									},
+									onCleanup : function(){},
+									onClosed : function(){},
+									onError : function(){}
+								});
+							}
+						});
+					} else {
+						
+					}
+					return false;
+				});
+			};
+			ModalEdit(1);
+		});
+	</script>
+ <script>
+   jQuery(document).ready(function(){
+   jQuery("#menunav ul li").click(function () {
+    jQuery(this).children().toggle();
+    });
+     });
+  </script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+// Виджет кнопки вверх/вниз
+// Версия 2.0
+
+// jQuery('body').append('<div class="button-up" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: 0px;bottom: 0px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_up.png">наверх</div><div class="button-bottom" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: 0px;bottom: 0px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_bottom.png"><br/>вниз</div>');
+
+jQuery('body').append('<div class="button-up" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: -10px;bottom: 55px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_up_2.png"></div><div class="button-bottom" style="display: none;opacity: 0.7;width: 80px;position: fixed;z-index:1000;right: -10px;bottom: 20px;cursor: pointer;text-align: center;line-height: 30px;color: #9c0605;font-weight: bold;"><img src="/themes/images/go_bottom_2.png"><br/></div>');
+
+jQuery(window).scroll(function ()
+{
+	if (jQuery(this).scrollTop () > 250)
+	{
+		jQuery('.button-up').fadeIn();
+		//jQuery('.button-bottom').fadeOut();
+	}
+	else if (jQuery(this).scrollTop () < 250)
+	{
+		jQuery('.button-bottom').fadeIn();
+		jQuery('.button-up').fadeOut();
+	}
+	if(jQuery(window).scrollTop()+jQuery(window).height()>=jQuery(document).height())
+	{
+	    jQuery('.button-bottom').fadeOut();
+	}
+});
+
+
+jQuery('.button-up').click(function(){
+jQuery('body,html').animate({
+scrollTop: 0
+}, 800);
+return false;
+});
+jQuery('.button-bottom').click(function(){
+jQuery('body,html').animate({scrollTop:jQuery(document).height()}, 800);
+return false;
+});
+
+jQuery('.button-up,.button-bottom').hover(function() {
+jQuery(this).animate({
+'opacity':'1',
+}).css({'color':'#9c0605'});
+}, function(){
+jQuery(this).animate({
+'opacity':'0.7'
+}).css({'color':'#9c0605'});;
+});
+
+
+
+});
+
+</script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="/themes/styles/contentrotator.css" media="screen" />
+	<script type="text/javascript" src="/scripts/jquery_min.js"></script>
+	<script src="/scripts/jquery-ui-personalized-1.5.3.packed.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#rotator > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 4000, true);
+		});
+	</script>
+<!-- Разобраться, добавить в файл стилей -->
+  <style type="text/css">
+   div.header_msg {
+		width: 40%;
+		text-align: center;
+	    height: 200px;
+	    position: absolute;
+	    top: 40%;
+	    left: 30%;
+		z-index: 100;
+	 }
+  </style>
+
+</head>
+<body>
+<!-- Выяснить, работает ли это вообще. При необходимости отключить -->
+    <div id="nofooter">
+		<div class="menu_background">
+			<div class="office_menu">
+						<ul class="user_menu">
+				<li>
+					<a style="text-decoration:none" title="" class="">
+						<span><span></span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/people/3890781" title="Бабушкин Владимир Игоревич" class="authorized_user">
+						<span><span>Бабушкин Владимир Игоревич</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/" title="Личный кабинет" class="">
+						<span><span>Личный кабинет</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/logout/" title="Выход из системы" class="">
+						<span><span>Выход</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/office/apply-support/" title="Отправить заявку в ЦИТ" class="">
+						<span><span>Заявка в ЦИТ</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="http://nsau.edu.ru/mail/" title="Корпоративная почта" class="">
+						<span><span>Корпоративная почта</span></span>
+					</a>
+				</li>
+			</ul>
+					
+
+
+
+
+
+
+
+
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--div id="page_title2"><div><span><a href="https://nsau.edu.ru/department/commission/">Приемная комиссия</a></span><br/>(383) 347-41-14</div></div-->
+		    <div id="header" class="header">
+<!-- Лого -->
+				<a id="logo" class="header__logo" href="/">
+					<span><span>&nbsp;</span></span>
+				</a>
+			
+ 
+ </style>
+<div class="header-block">
+	 <div class="header-icon-block header-block__item">
+	 	<a href="/en/" class="social-link link-en"><div class="social-link__icon">EN</div></a>
+	 	<a href="https://vk.com/nsau_press" class="social-link" title="Официальная страница Vkontakte" target="_blank">
+	 		<img src="/themes/images/vk.png" alt="Вконтакте Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://www.instagram.com/nsau_press/" class="social-link" title="Официальная страница Instagram" target="_blank">
+	 		<img src="/themes/images/instagram.png" alt="Instagram Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://t.me/ngaulife" class="social-link" title="Официальная страница Telegram" target="_blank">
+	 		<img src="/themes/images/telegram.png" alt="Телеграмм Новосибирский ГАУ" class="social-link__icon">
+	 	</a>
+	 	<a href="https://www.youtube.com/channel/UCl6aOEZT9TxibaXzK7zIYXA" class="social-link" title="Официальная страница Youtube" target="_blank">
+	 		<img src="/themes/images/youtube.png" alt="Youtube Новосибирский ГАУ " class="social-link__icon">
+	 	</a>
+	 	<a href="/map/" class="social-link" title="Карта сайта">
+	 		<img src="/themes/images/site-map.png" alt="Карта сайта" class="social-link__icon">
+	 	</a>
+	 	<a href="/vds/" class="social-link" itemprop="copy" title="Версия сайта для слабовидящих">
+	 		<img src="/themes/images/eye.png" alt="Версия сайта для слабовидящих" class="social-link__icon">
+	 	</a>
+	 </div>
+					
+	<!-- Поиск по сайту -->
+	<!--  -->
+					<div  id="login_search" class="header__search header-block__item">
+													<!--a href="" /><div class="tasks_count warning"></div></a-->
+						<form id="FormSearch" method="get" action="/search/" accept-charset="UTF-8">
+						  <input type="search" name="search" placeholder="Поиск по сайту">
+						  <button type="submit" class="submit" type="submit" value="Искать"></button>
+						</form>
+					
+							
+			    </div>
+</div>
+ 
+		    
+		     </div>
+		    <!--header-->
+		    <!-- Главное меню -->
+		    	<div id="header_menu">
+									<ul>
+					<li>
+						<a href="/about/"  title="О вузе">
+							О вузе						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/abitur/"  title="Добро пожаловать в наш университет">
+							Абитуриенту						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/student/"  title="Студенту">
+							Студенту						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/nir/"  title="Научно-исследовательская работа">
+							Наука						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/library/"  title="Библиотека университета">
+							Библиотека						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/directory/"  title="В помощь преподавателю">
+							Преподавателю						<span></span><span></span>
+						</a>
+					</li>
+					<li>
+						<a href="/sveden/"  title="Сведения об образовательной организации">
+							Сведения об образовательной организации						<span></span><span></span>
+						</a>
+					</li>
+				</ul>
+					<div id="menu_left_bg">&nbsp;</div>
+				</div>	
+		    <div id="content">
+	
+				<div class="left_cont"><!-- Left Cont -->
+
+				<p style="padding: 0px 0px 0px 0px;"><a href="https://svoefermerstvo.ru/organization/4895" title="Маркетплейс &laquo;Своё Фермерство&raquo;" laquo="" raquo="" target="_blank"><img style="margin: 0px 0px 7px 0px; box-shadow: #c2c2c2 5px 5px 10px;" title="Маркетплейс &laquo;Своё Фермерство&raquo;" src="https://nsau.edu.ru/images/Banner_na_sai.jpg" alt="Маркетплейс &laquo;Своё Фермерство&raquo;" width="290" height="112" /></a></p>
+<p style="padding-top: 0px; margin-top: 0px;"><a href="/department/ustojchivyj-universitet/" target="_blank"><img style="margin-bottom: 7px; box-shadow: #c2c2c2 5px 5px 10px;" title="Устойчивый университет" src="/images/_УУ.png" alt="Устойчивый университет" width="290" /></a></p>
+<p style="padding-top: 0px; margin-top: 1px; margin-bottom: 3px;"><a href="/abitur/" target="_blank"><img style="margin-top: 0px; margin-bottom: 7px; box-shadow: #c2c2c2 0px 0px 5px;" title="Приемная комиссия НГАУ" src="http://nsau.edu.ru/images/pk_01.jpg" alt="Приемная комиссия НГАУ" width="290" height="50" /></a></p>
+<div style="margin-bottom: 16px;"><a href="/news/80771.html" title="АгроНТИ-2021 пройдет на площадке Новосибирского ГАУ"><img style="box-shadow: #c2c2c2 0px 0px 10px;" title="Новосибирский ГАУ - региональная площадка АгроНТИ-2021" src="https://nsau.edu.ru/images/%20НТИ.jpg" alt="Новосибирский ГАУ - региональная площадка АгроНТИ-2021" width="290" height="73" /></a></div>
+<p style="padding-top: 0px; margin-top: 0px;"><a href="https://nsau.edu.ru/about/rekvizity/" target="_blank"><img style="margin-top: 0px; margin-bottom: 7px; box-shadow: #c2c2c2 5px 5px 10px;" title="Реквизиты для оплаты обучения" src="https://nsau.edu.ru/images/%20обучения_1.png" alt="Реквизиты для оплаты обучения" width="290" height="70" /></a></p>
+<p style="padding-top: 0px;"><a href="/about/kampusnaya-karta/" target="_blank"><img style="margin-top: 0px; box-shadow: #c2c2c2 0px 0px 5px;" title="Кампусная карта" src="/images/kampus.png" alt="Кампусная карта" width="290" height="80" /></a></p>			<ul class="drop_vert_menu">
+								<li class="dropdown-top">
+														<a href="/about/personnel/" title="Сведения об руководстве вуза" class="dropdown-top">
+														<span>Ректорат							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+									</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Факультеты и институты<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/agro/" class=""  title="Агрономический факультет">Агрономический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/biotech/" class=""  title="Биолого-технологический факультет">Биолого-технологический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/vetfac/" class=""  title="Факультет ветеринарной медицины">Факультет ветеринарной медицины</a>
+														</li>
+								<li id="drop" >
+									<a href="/mechfac/" class=""  title="Инженерный институт">Инженерный институт</a>
+														</li>
+								<li id="drop" >
+									<a href="/econ/" class=""  title="Факультет экономики и управления">Факультет экономики и управления</a>
+														</li>
+								<li id="drop" >
+									<a href="/law/" class=""  title="Юридический факультет">Юридический факультет</a>
+														</li>
+								<li id="drop" >
+									<a href="/spo-fac/" class=""  title="Факультет среднего профессионального образования НГАУ">Факультет среднего профессионального образования НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/izop/" class=""  title="Заочное образование">Заочное образование</a>
+														</li>
+								<li id="drop" >
+									<a href="/idpo/" class=""  title="Институт дополнительного профессионального образования">Институт дополнительного профессионального образования</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/depart_teaching/" class=""  title="Отдел по подготовке научно-педагогических кадров">Отдел по подготовке научно-педагогических кадров</a>
+														</li>
+								<li id="drop" >
+									<a href="/kainsk/" class=""  title="Куйбышевский сельскохозяйственный техникум">Куйбышевский сельскохозяйственный техникум</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Филиалы<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/tomsk/" class=""  title="Томский сельскохозяйственный институт – филиал НГАУ">Томский сельскохозяйственный институт</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Учебные и ресурсные центры<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/abitur/preparation/" class=""  title="Центр довузовской подготовки">Центр довузовской подготовки</a>
+														</li>
+								<li id="drop" >
+									<a href="/ct-ngau/" class=""  title="Центр тестирования НГАУ">Центр тестирования НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/lc-perfekt/" class=""  title="Лингвистический центр Перфект">Лингвистический центр Перфект</a>
+														</li>
+								<li id="drop" >
+									<a href="/landscape/" class=""  title="Ландшафтный центр">Ландшафтный центр</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/agro/esm/" class=""  title="">Учебно-производственное хозяйство «Сад Мичуринцев»</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Внеучебные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/" class=""  title="">Отдел по внеучебной и воспитательной работе</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/obedinennyj-sovet-obuchayuschikhsya/" class=""  title="">Объединенный Совет обучающихся</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/department/vvr/studencheskie-otryady/shtab-so/" class=""  title="">Штаб СО НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="/profkom/" class=""  title="Профком студентов">Профком студентов</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/stud-club/" class=""  title="Студенческий клуб">Студенческий клуб</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/sportivnyj-klub/" class=""  title="Спортивный клуб">Спортивный клуб</a>
+														</li>
+								<li id="drop" >
+									<a href="https://nsau.edu.ru/ssk/" class=""  title="">ССК «Международник»</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/volunteer/" class=""  title="Волонтёрский центр">Волонтёрский центр</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Административные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="http://nsau.edu.ru/about/uchyonyj-sovet/" class=""  title="">Ученый совет</a>
+														</li>
+								<li id="drop" >
+									<a href="https://nsau.edu.ru/about/uni-econ/struktura/" class=""  title="">Бухгалтерия</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/hr-dep/" class=""  title="Отдел кадров">Отдел кадров</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/o-del/" class=""  title="Отдел делопроизводства">Отдел делопроизводства</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/peo/" class=""  title="Планово-экономический отдел">Планово-экономический отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/dogovornoj-otdel/" class=""  title="Отдел договорных и имущественных отношений">Отдел договорных и имущественных отношений</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/voenuch-dep/" class=""  title="Военно-учётный стол">Военно-учётный стол</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/uchotdel/" class=""  title="Учебный отдел">Учебный отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/record_student/" class=""  title="Отдел по учёту студентов">Отдел по учёту студентов</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/practice_placement/" class=""  title="Отдел практик и трудоустройства">Отдел практик и трудоустройства</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/quality/" class=""  title="Отдел по качеству образовательной деятельности (НК-342)">Отдел по качеству образовательной деятельности</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/ot-tb-dep/" class=""  title="Служба охраны труда">Служба охраны труда</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/shtab-go-i-chs/" class=""  title="Штаб ГО и ЧС">Штаб ГО и ЧС</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/akhch/" class=""  title="Административно-хозяйственная часть">Административно-хозяйственная часть</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/yur/" class=""  title="Юридический отдел">Юридический отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/pervyj-otdel/" class=""  title="Первый отдел">Первый отдел</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/cit/" class=""  title="Центр информационных технологий">Центр информационных технологий</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/commission/" class=""  title="Приёмная комисcия">Приёмная комисcия</a>
+														</li>
+								<li id="drop" >
+									<a href="/popechitelskij-sovet/" class=""  title="Попечительский совет универститета">Попечительский совет</a>
+														</li>
+								<li id="drop" >
+									<a href="/unoko/" class=""  title="Отдел по профессионально-общественной аккредитации">Отдел по профессионально-общественной аккредитации</a>
+														</li>
+								<li id="drop" >
+									<a href="/department/profkom-sotrudnikov/" class=""  title="Профком сотрудников">Профком сотрудников</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+												
+						<a / title="Главная страница сайта" class="dropdown-top">
+														<span>Научные подразделения<img class="menu_arrow" src="/themes/images/menu_arrow.PNG"/>							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+											 <ul class="dropdown-inside">
+														<li id="drop" >
+									<a href="/nir/depart_science/" class=""  title="Научно-исследовательская часть">Научно-исследовательская часть</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/o-nich/" class=""  title="Отдел по инновационно-внедренческой деятельности">Отдел по инновационно-внедренческой деятельности</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/ocpmntrapk/" class=""  title="Отраслевой центр прогнозирования и мониторинга научно-технологического развития АПК">Отраслевой центр прогнозирования и мониторинга научно-технологического развития АПК</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/ilk/" class=""  title="Испытательный лабораторный комплекс - Испытательный центр">Испытательный лабораторный комплекс - Испытательный центр</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/sovet-molodykh-uchyonykh/" class=""  title="Совет молодых учёных">Совет молодых учёных</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/incubator/" class=""  title="Бизнес-инкубатор">Бизнес-инкубатор</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/nir/publishing/" class=""  title="">Издательский центр НГАУ</a>
+														</li>
+								<li id="drop" >
+									<a href="http://nsau.edu.ru/nir/centr-kollektivnogo-polzovaniya-nauchnym-oborudovaniem/" class=""  title="">Испытательный центр межфакультетской научной лаборатории</a>
+														</li>
+								<li id="drop" >
+									<a href="/nir/o-nich/vystavochnyj-kompleks/" class=""  title="Выставочный комплекс">Выставочный комплекс</a>
+														</li>
+					</ul>
+				</li>
+					<li class="dropdown-top">
+														<a href="/department/international/" title="Международная деятельность" class="dropdown-top">
+														<span>Международная деятельность							</span>
+						</a>
+						<!-- <img class="drop_arrow" src="/themes/images/blockcontentbullets.png"> -->
+									</li>
+			</ul>
+		<div class="translation">
+			<a href=/webcast/><img src=/themes/images/logo_camera.png><span class="translation_text">Видеотрансляция событий</span></a>
+		</div>
+		
+	<div class="announce_tabs_container">
+		<ul class="tabs">
+			<li class="current">Анонсы</li>
+			<li>Объявления</li>
+			<li>События</li>
+		</ul>
+		<div class="box2 visible">
+		  
+			<div class="event_block">
+				<div class="event_block_date">
+					<p>20<br><span>дек.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/86851.html">VI Всероссийская (национальная) научная конференция «Роль аграрной науки в устойчивом развитии сельских территорий»</a></p>
+					
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		  
+			<div class="event_block">
+				<div class="event_block_date">
+					<p>09<br><span>фев.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/88531.html">XVII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «АГРАРНАЯ НАУКА – СЕЛЬСКОМУ ХОЗЯЙСТВУ»</a></p>
+					
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 		</div>
+		<div class="box2">
+		 		</div>
+		<div class="box2">
+		 			<div class="event_block">
+				<div class="event_block_date">
+					<p>20<br><span>дек.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/86851.html">VI Всероссийская (национальная) научная конференция «Роль аграрной науки в устойчивом развитии сельских территорий»</a></p>
+					<p><a href="/news/category/7">Конференции и семинары</a></p>
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 			<div class="event_block">
+				<div class="event_block_date">
+					<p>09<br><span>фев.</span></p>
+				</div>
+				<div class="event_block_text">
+					<p><a href="/news/88531.html">XVII МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ «АГРАРНАЯ НАУКА – СЕЛЬСКОМУ ХОЗЯЙСТВУ»</a></p>
+					<p><a href="/news/category/7">Конференции и семинары</a></p>
+				</div>
+				<div class="event_block_category"><p><a href="/news/category/7" >Конференции и семинары</a></p></div>
+				<div class="clear"></div>
+			</div>
+		 		</div>
+	</div>
+					</div><!-- End Left Cont -->
+				<div class="center_cont">
+					<div class="cn"><!-- Center Cont -->
+					
+
+						<div class="" id="news_annonse">
+		<!--h1>
+		<a href="/news/" title="Читать все новости">Новости</a>
+	</h1-->
+
+						<script src="/scripts/jquery.dotdotdot.min.js" type="text/javascript"></script>
+
+	<div id="newscat1" class="newscat">
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/87841.html" title="Читать подробнее"><img src="/images/news/87841_tn.jpg" alt="Неделя открытых дверей Новосибирского ГАУ online" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">23.11</div>
+					
+				<div class="noticeTitle"><a href="/news/87841.html" title="Читать подробнее">Неделя открытых дверей Новосибирского ГАУ online</a></div>
+				<div class="shortText" id=auto_cut_1><p>Неделя открытых дверей Новосибирского ГАУ online пройдет в новом формате с 29 ноября по 3 декабря.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/87841.html" title="Читать подробнее">Неделя открытых дверей Новосибирского ГАУ online</a></div>
+					<div class="shortText"><p>Неделя открытых дверей Новосибирского ГАУ online пройдет в новом формате с 29 ноября по 3 декабря.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/85801.html" title="Читать подробнее"><img src="/images/news/85801_tn.jpg" alt="Программа «Пушкинская карта 2021» стартует в Новосибирской области" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.09</div>
+					
+				<div class="noticeTitle"><a href="/news/85801.html" title="Читать подробнее">Программа «Пушкинская карта 2021» стартует в Новосибирской области</a></div>
+				<div class="shortText" id=auto_cut_2><p>Теперь, любой гражданин России в возрасте от 14 до 22 лет может посещать музеи и театры по госпрограмме &laquo;Пушкинская карта 2021&raquo;.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/85801.html" title="Читать подробнее">Программа «Пушкинская карта 2021» стартует в Новосибирской области</a></div>
+					<div class="shortText"><p>Теперь, любой гражданин России в возрасте от 14 до 22 лет может посещать музеи и театры по госпрограмме &laquo;Пушкинская карта 2021&raquo;.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88581.html" title="Читать подробнее"><img src="/images/news/88581_tn.jpg" alt="Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">15.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88581.html" title="Читать подробнее">Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов</a></div>
+				<div class="shortText" id=auto_cut_3><p>В городе Воронеж прошел Всероссийский конкурс профессионального мастерства среди сельскохозяйственных студенческих отрядов</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88581.html" title="Читать подробнее">Студенты Новосибирского ГАУ - участники Всероссийского конкурса профессионального мастерства среди сельскохозяйственных студенческих отрядов</a></div>
+					<div class="shortText"><p>В городе Воронеж прошел Всероссийский конкурс профессионального мастерства среди сельскохозяйственных студенческих отрядов</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88571.html" title="Читать подробнее"><img src="/images/news/88571_tn.jpg" alt="«Вкусная пятница» в Новосибирском ГАУ" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">15.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88571.html" title="Читать подробнее">«Вкусная пятница» в Новосибирском ГАУ</a></div>
+				<div class="shortText" id=auto_cut_4><p>&laquo;Вкусная пятница&raquo; &ndash; новый, интересный проект от Россельхозбанка, целью которого является, продвижение натуральных фермерских продуктов среди населения в ходе проведения которого посетители приобретают продукты напрямую у поставщика без наценок и надбавок.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88571.html" title="Читать подробнее">«Вкусная пятница» в Новосибирском ГАУ</a></div>
+					<div class="shortText"><p>&laquo;Вкусная пятница&raquo; &ndash; новый, интересный проект от Россельхозбанка, целью которого является, продвижение натуральных фермерских продуктов среди населения в ходе проведения которого посетители приобретают продукты напрямую у поставщика без наценок и надбавок.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88541.html" title="Читать подробнее"><img src="/images/news/88541_tn.jpg" alt="С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">14.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88541.html" title="Читать подробнее">С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO</a></div>
+				<div class="shortText" id=auto_cut_5><p>В целях расширения профессиональных компетенций обучающихся Новосибирский ГАУ осуществляет долгосрочное сотрудничество с союзом LOGO по реализации практической подготовки студентов на базе ведущих экологических хозяйств Германии.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88541.html" title="Читать подробнее">С деловым визитом Новосибирский ГАУ посетит председатель немецкого союза LOGO</a></div>
+					<div class="shortText"><p>В целях расширения профессиональных компетенций обучающихся Новосибирский ГАУ осуществляет долгосрочное сотрудничество с союзом LOGO по реализации практической подготовки студентов на базе ведущих экологических хозяйств Германии.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews orange'><a href='/news/category/1'>Международная деятельность</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88521.html" title="Читать подробнее"><img src="/images/news/88521_tn.jpg" alt="Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88521.html" title="Читать подробнее">Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей</a></div>
+				<div class="shortText" id=auto_cut_6><p><em>8 декабря 2021 года в Инновационном центре &laquo;Сколково&raquo; завершился Всероссийский конкурс молодых технологических предпринимателей, организованный Министерством науки и высшего образования РФ при поддержке Фонда &laquo;Сколково&raquo; (Группа ВЭБ.РФ). </em></p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88521.html" title="Читать подробнее">Молодые ученые Новосибирского ГАУ – суперфиналисты Всероссийского конкурса технологических предпринимателей</a></div>
+					<div class="shortText"><p><em>8 декабря 2021 года в Инновационном центре &laquo;Сколково&raquo; завершился Всероссийский конкурс молодых технологических предпринимателей, организованный Министерством науки и высшего образования РФ при поддержке Фонда &laquo;Сколково&raquo; (Группа ВЭБ.РФ). </em></p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews coral'><a href='/news/category/12'>Наука и инновации</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88511.html" title="Читать подробнее"><img src="/images/news/88511_tn.jpg" alt="В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88511.html" title="Читать подробнее">В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»</a></div>
+				<div class="shortText" id=auto_cut_7><p>Материалы конференции будут <strong>&nbsp;</strong>изданы в виде сборника трудов,&nbsp; размещены на сайте Башкирского ГАУ и в наукометрической базе данных РИНЦ (научной электронной библиотеке eLIBRARY.RU) с присвоением публикациям цифровых идентификаторов DOI.</p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88511.html" title="Читать подробнее">В «Точке кипения» Новосибирского ГАУ, в онлайн режиме состоялась Всероссийская научно-методическая конференция «Агроклассы: состояние, проблемы и перспективы»</a></div>
+					<div class="shortText"><p>Материалы конференции будут <strong>&nbsp;</strong>изданы в виде сборника трудов,&nbsp; размещены на сайте Башкирского ГАУ и в наукометрической базе данных РИНЦ (научной электронной библиотеке eLIBRARY.RU) с присвоением публикациям цифровых идентификаторов DOI.</p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+								<div class="postBox">
+					<div class="imgNews">
+													<a href="/news/88431.html" title="Читать подробнее"><img src="/images/news/88431_tn.jpg" alt="В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий" /></a>											</div>
+					<div class="dateBg"></div>
+					<div class="dateNews">13.12</div>
+					
+				<div class="noticeTitle"><a href="/news/88431.html" title="Читать подробнее">В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий</a></div>
+				<div class="shortText" id=auto_cut_8><p><em>II</em><em> Всероссийская научно-практическая конференция молодых ученых &laquo;Устойчивое развитие сельских территорий&raquo; прошла 10 декабря на базе Пространства коллективной работы &laquo;Точка кипения НГАУ&raquo; в гибридном формате. Участие в работе конференции приняли студенты, магистранты и аспиранты крупнейших образовательных центров Сибири и Поволжья, а также представители высших учебных заведений республики Беларусь. </em></p></div>
+
+
+<!-- 				<div class="noticeTitle"><a href="/news/88431.html" title="Читать подробнее">В Новосибирском ГАУ обсудили практики и инструменты обеспечения устойчивого развития сельских территорий</a></div>
+					<div class="shortText"><p><em>II</em><em> Всероссийская научно-практическая конференция молодых ученых &laquo;Устойчивое развитие сельских территорий&raquo; прошла 10 декабря на базе Пространства коллективной работы &laquo;Точка кипения НГАУ&raquo; в гибридном формате. Участие в работе конференции приняли студенты, магистранты и аспиранты крупнейших образовательных центров Сибири и Поволжья, а также представители высших учебных заведений республики Беларусь. </em></p></div> -->
+
+				<script type="text/javascript">	
+					function get_name_browser()
+					{
+					    var ua = navigator.userAgent;    
+					    // if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+					    if (ua.search(/Firefox/) > 0) return 'ff';
+					    // if (ua.search(/Opera/) > 0) return 'Opera';
+					    // if (ua.search(/Safari/) > 0) return 'Safari';
+					    // if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+					    return 'Не определен';
+					}
+ 
+					var browser = get_name_browser();
+					if (browser!="ff") 
+					{
+					$(".noticeTitle").dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+
+					$(".shortText").children().dotdotdot(
+					{
+						ellipsis: "... ",
+						wrap: "word",
+						fallbackToLetter: true,
+						after: null,
+						watch: "window",
+						height: null,
+						tolerance: 0,
+						callback: function(isTruncated, orgContent){},
+						lastCharacter: {
+						remove: [" ", ",", ";", ".", "!", "?"],
+						noEllipsis: []
+					}
+					});
+				};
+
+
+
+					</script>
+
+					<div class='categoryNews green'><a href='/news/category/2'>Студенческая жизнь</a>					</div>
+<div class="clear"></div>
+			</div>
+	
+			</div>
+
+	<div class="clear"></div>
+	<a href="/news/" title="Читать все новости" class="allNews">
+				Все новости			</a>
+							
+						</div>
+		<a onclick="show()" id="show_sub"><img src="themes/images/subs.png"/>Подписаться на новости</a>
+		<div class="clear"></div>
+
+			<div id="subscribe_form" style="display:none;">
+				<form action="/" method="post">
+					<fieldset>
+						
+												<p>                   
+							<input type="text" size="20" name="164[subscribe][email]" value="ваш e-mail" onclick="this.value='';" onblur="if(!this.value) this.value='ваш e-mail';" />
+							<script src='https://www.google.com/recaptcha/api.js'></script>
+							<div class="g-recaptcha" data-sitekey="6LevLxMUAAAAAKcz_AZOCeKpx92QXDBVD79wcWd5"></div>
+							<input type="submit" value="Готово" class="button" />
+						</p>
+
+						<a href="unsubscribe/">Отписаться от новостей</a>
+					</fieldset>
+				</form>
+			</div>
+
+		<script type='text/javascript'>
+    	function show()
+    	{
+        	if (document.getElementById('subscribe_form').style.display == 'block') 
+       		{
+            	document.getElementById('subscribe_form').style.display = 'none';
+        	} else 
+        	{
+           		 document.getElementById('subscribe_form').style.display = 'block';
+        	}
+    	}
+		</script>
+
+				<div class="announce_tabs_container linksNew">
+<div></div>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 70%;">
+<div>СМИ</div>
+<p><a href="/nir/herald/">Научный журнал &laquo;Вестник НГАУ&raquo;</a><br /><a href="/vestnik/">Газета &laquo;Вестник аграрного университета&raquo;</a><br /><a href="/bulletin/">Информационный бюллетень НГАУ</a><br /><a href="/profed/">Научный журнал &laquo;Профессиональное образование в современном мире&raquo;</a><br /><a href="/nir/zhurnal-innovacii-i-prod-bezopasnos/">Теоретический и научно-практический журнал &laquo;Инновации и продовольственная безопасность&raquo;</a></p>
+</td>
+<td><br />
+<div>Студенту</div>
+<p><a href="/vacancies/">Вакансии для выпускников</a><br /><a href="/studtv/2017/">Студенческое телевидение</a><br /><a href="/department/cit/matbase/wi-fi/">Зоны доступа Wi-Fi</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>					</div>
+				</div><!-- End Center Cont $EE["modules_data"]["people_menu"] || -->
+				<div class="clear">&nbsp;</div>
+		    </div><!--content-->
+			
+			
+			
+			
+	                        <!-- slider  -->
+    <div class="wmuSlider example3">
+        <div class="wmuSliderWrapper">
+
+
+            <article>
+            <a href="http://mcx.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/03_1.PNG" />
+                <div class="capt">Минсельхоз РФ</div>
+            </a>
+            </article>
+
+             <article>
+                <a href="http://www.fsvps.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/22.PNG" />
+                <div class="capt">Россельхознадзор</div>
+                </a>
+            </article>
+
+            <article>
+            <a href="https://minobrnauki.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/02.PNG" />
+                  <div class="capt">Минобрнауки</div>
+             </a>
+            </article>
+
+            <article>
+            <a href="http://obrnadzor.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/01.PNG" />
+                <div class="capt">Рособрнадзор</div>
+               </a>
+            </article>
+            <article>
+            <a href="http://rostrud.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/05.PNG" />
+                <div class="capt">Роструд</div>
+            </a>
+            </article>
+              <article>
+            <a href="http://mcx.nso.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/logo_nsk_2.jpg" />
+                <div class="capt">Минсельхоз НСО</div>
+            </a>
+            </article>
+
+            <article>
+                <a href="http://zakupki.gov.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/20.PNG" />
+                <div class="capt">Госзакупки</div>
+                </a>
+            </article>
+
+            <article>
+            <a href="http://agrovuz.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/07.PNG" />
+                <div class="capt">Агровуз</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://rssm.su/" target="_blank">
+                <img class="slider_img" src="images/slider/16_1.PNG" />
+                <div class="capt_small">РССМ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/09.PNG" />
+                <div class="capt_small">Российское образование</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://window.edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/10.PNG" />
+                <div class="capt_small">Единое окно</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://fcior.edu.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/12.PNG" />
+                <div class="capt_small">Федеральный центр ИОР</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://scienceport.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/14.PNG" />
+                <div class="capt_small">Наука и образование против террора</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://нцпти.рф/" target="_blank">
+                <img class="slider_img" src="images/slider/15.PNG" />
+                <div class="capt_small">НЦПТИ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://spo.wil.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/19.PNG" />
+                <div class="capt_small">Поддержка инклюзивного образования</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://pravo.minjust.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/5mm.jpg" />
+                <div class="capt_small">НПА РФ</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://vayenshtefan.ru/" target="_blank">
+                <img class="slider_img" style="margin-top: 10px;" src="images/slider/23.gif" />
+                <div class="capt_small" style="margin-top: 5px;">СМИ Вайенштефан</div>
+            </a>
+            </article>
+             <article>
+            <a href="http://rcmp-nso.ru" target="_blank">
+                <img class="slider_img" style="margin-top: 10px;" src="images/slider/rpmi.jpg" />
+                <div class="capt_small" style="margin-top: 5px;">РЦМП</div>
+            </a>
+            </article>
+
+            <article>
+            <a href="http://www.avroradg.ru/" target="_blank">
+                <img class="slider_img" src="images/slider/24.png" />
+                <div class="capt_small" style="margin-top: 5px;">СЭД Аврора</div>
+            </a>
+            </article>
+              
+            <article>
+            <a href="https://xn--2020-k4dg3e.xn--p1ai/" target="_blank">
+                <img class="slider_img" src="images/slider/year2020.png" />
+                <div class="capt">Год памяти и славы - 2020</div>
+            </a>
+            </article>         
+<!--             <article>
+                <a href="">
+                <img class="slider_img" src="images/slider/06.PNG" />
+                <div class="capt">ВЖУХ!</div>
+                </a>
+            </article> -->
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/jquery.wmuSlider.min.js"></script>
+    <link rel="stylesheet" href="themes/styles/slider.css" type="text/css" media="screen" />
+    <script>
+        if( screen.width <= 1024 )
+        {
+            var items = 2;
+        }
+        else
+        {
+            var items = 5;
+        }
+        $('.example3').wmuSlider(
+        {
+            touch: Modernizr.touch,
+            animation: 'slide',
+                        slideshow: false,
+            items: items
+        });
+    </script>
+    <!-- end slider -->
+        		</div>
+
+		<div id="footer-pusher">&nbsp;</div>
+    	</div>
+    	<!--nofooter -->
+    	<div id="footer">    
+			<div class="wrapper">
+				<div id="main-counter">
+								</div>
+
+				<div id="copyright">
+					<div class="footer-left">
+						&copy;&nbsp;1998-2021 Новосибирский государственный аграрный университет <br>
+						630039, г. Новосибирск, ул. Добролюбова, 160<br/>
+						Свидетельство о регистрации СМИ <a href="http://nsau.edu.ru/images/about/smi_license.jpg">Эл №ФС77-43853 от 9 февраля 2011 года.</a>
+					</div>
+					<div class="footer-right">
+						<div class="age"><span class="age_limit">12+</span></div>
+						<a href="/support/"> Служба технической поддержки</a><br>
+						<a href="/department/commission/">Приемная комиссия</a>
+					</div>
+				</div>
+		</div>
+	
+    </div><!--footer--><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(7937029, "init", {
+        id:7937029,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/7937029" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

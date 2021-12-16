@@ -1,0 +1,32 @@
+hero.py
+lesson-10-if-else.py
+Lesson-11-dictonacy-1.py
+Lesson-12-Dictionary.py
+Lesson-13-IO user.py
+Lesson-14-function.py
+Lesson-15-function-2.py
+Lesson-16-Modules.py
+Lesson-17-Class1.py
+Lesson_18-Class2.py
+Lesson-19-file-work.py
+Lesson-20-Error.py
+Lesson-21 JSON.py
+Lesson-22-cmd.py
+Lesson-23-RegExpression.py
+Lesson-3Variables.py
+Lesson5str.py
+Lesson-6-numbers.py
+Lesson-7-loops.py
+Lesson-8-List1.py
+Lesson-9-2 massive.py
+Lessons_list.txt
+mymodule.py
+my_passwords.txt
+Piton.iml
+__pycache__
+script.py
+src
+test2.txt
+user_names.txt
+user_passwords.txt
+user_settings.txt
