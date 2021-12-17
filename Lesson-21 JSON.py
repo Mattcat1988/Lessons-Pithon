@@ -1,4 +1,5 @@
 import json
+import pygame
 
 filename = "user_settings.txt"
 myfile = open(filename, mode='w',encoding='Latin-1')
