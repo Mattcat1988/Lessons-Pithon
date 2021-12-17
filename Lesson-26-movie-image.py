@@ -3,6 +3,7 @@ import pygame
 MAX_X = 1920
 MAX_Y = 1080
 game_over = False
+bg_color = (0, 0, 0)
 
 pygame.init()
 screen = pygame.display.set_mode((MAX_X, MAX_Y), pygame.FULLSCREEN)
@@ -10,13 +11,12 @@ pygame.display.set_caption("hello my First Pygame")
 
 print(pygame.image.get_extended())
 
-
-myimage = pygame.image.load("matrix-reloaded-fashion-model-beauty-monica-bellucci-long-hair.jpg").convert()
+myimage = pygame.image.load("Lia.jpg").convert()
 myimage = pygame.transform.scale(myimage, (100, 100))
 
 x = 500
 y = 100
-
+# ------------------Main game loop-----------------------------
 while game_over == False:
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
@@ -30,9 +30,10 @@ while game_over == False:
                 y -= 20
             if event.key == pygame.K_DOWN:
                 y += 20
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            x, y = event.pos
 
 
-
-    screen.blit(myimage, (500, 100))
+    screen.fill(bg_color)
+    screen.blit(myimage, (x, y))
     pygame.display.flip()
-
