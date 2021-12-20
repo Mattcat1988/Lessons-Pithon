@@ -48,6 +48,11 @@ while game_over == False:
             if event.key == pygame.K_DOWN:
                 move_down = False
 
+        if move_left == True:
+            x -= 1
+            if x < 0:
+                x = 0
+
 
 
 
