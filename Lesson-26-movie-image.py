@@ -51,7 +51,6 @@ while game_over == False:
         if event.type == pygame.MOUSEBUTTONDOWN:
             x, y = event.pos
 
-
     if move_left:
         x -= 1
         if x < 0:
