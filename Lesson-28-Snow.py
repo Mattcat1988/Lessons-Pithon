@@ -3,8 +3,8 @@ import random
 import sys
 import time
 
-MAX_X = 1366
-MAX_Y = 768
+MAX_X = 1920
+MAX_Y = 1080
 MAX_SNOW = 100
 SNOW_SIZE = 64
 
