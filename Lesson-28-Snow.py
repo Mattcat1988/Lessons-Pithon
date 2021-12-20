@@ -55,7 +55,9 @@ def check_for_exit():
 # ------------------MAIN------------------
 # def initialize_pygame(MAX_X, MAX_Y):
 pygame.init()
+
 screen = pygame.display.set_mode((MAX_X, MAX_Y), pygame.FULLSCREEN)
+
 bg_color = (0, 0, 0)
 snowfall = []
 
