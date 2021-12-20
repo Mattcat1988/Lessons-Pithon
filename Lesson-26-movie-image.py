@@ -56,6 +56,16 @@ while game_over == False:
             x += 1
             if x > MAX_X-IMG_SIZE:
                 x = MAX_X-IMG_SIZE
+        if move_up == True:
+            y -= 1
+            if y < 0:
+                y = 0
+        if move_down == True:
+            y += 1
+            if y > MAX_Y-IMG_SIZE:
+                y = MAX_Y-IMG_SIZE
+
+
 
 
 
