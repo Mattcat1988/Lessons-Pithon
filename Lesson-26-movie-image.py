@@ -2,6 +2,7 @@ import pygame
 
 MAX_X = 1920
 MAX_Y = 1080
+IMG_SIZE = 100
 game_over = False
 bg_color = (0, 0, 0)
 
@@ -12,10 +13,16 @@ pygame.display.set_caption("hello my First Pygame")
 print(pygame.image.get_extended())
 
 myimage = pygame.image.load("Lia.jpg").convert()
-myimage = pygame.transform.scale(myimage, (100, 100))
+myimage = pygame.transform.scale(myimage, (IMG_SIZE, IMG_SIZE))
 
 x = 500
 y = 100
+
+move_right = False
+move_left = False
+move_up = False
+move_down = False
+
 # ------------------Main game loop-----------------------------
 while game_over == False:
     for event in pygame.event.get():
@@ -23,13 +30,28 @@ while game_over == False:
             if event.key == pygame.K_ESCAPE:
                 game_over = True
             if event.key == pygame.K_LEFT:
-                x -= 20
+                move_left = True
             if event.key == pygame.K_RIGHT:
-                x += 20
+                move_right = True
             if event.key == pygame.K_UP:
-                y -= 20
+                move_up = True
             if event.key == pygame.K_DOWN:
-                y += 20
+                move_down = True
+
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT:
+                move_left = False
+            if event.key == pygame.K_RIGHT:
+                move_right = False
+            if event.key == pygame.K_UP:
+                move_up = False
+            if event.key == pygame.K_DOWN:
+                move_down = False
+
+
+
+
+
         if event.type == pygame.MOUSEBUTTONDOWN:
             x, y = event.pos
 
