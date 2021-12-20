@@ -48,22 +48,22 @@ while game_over == False:
             if event.key == pygame.K_DOWN:
                 move_down = False
 
-        if move_left:
-            x -= 1
-            if x < 0:
+    if move_left:
+        x -= 1
+        if x < 0:
                 x = 0
-        if move_right:
-            x += 1
-            if x > MAX_X - IMG_SIZE:
+    if move_right:
+        x += 1
+        if x > MAX_X - IMG_SIZE:
                 x = MAX_X - IMG_SIZE
-        if move_up:
-            y -= 1
-            if y < 0:
-                y = 0
-        if move_down:
-            y += 1
-            if y > MAX_Y - IMG_SIZE:
-                y = MAX_Y - IMG_SIZE
+    if move_up:
+        y -= 1
+        if y < 0:
+            y = 0
+    if move_down:
+        y += 1
+        if y > MAX_Y - IMG_SIZE:
+            y = MAX_Y - IMG_SIZE
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             x, y = event.pos
