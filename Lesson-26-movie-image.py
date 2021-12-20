@@ -52,6 +52,10 @@ while game_over == False:
             x -= 1
             if x < 0:
                 x = 0
+        if move_right == True:
+            x += 1
+            if x > MAX_X-IMG_SIZE:
+                x = MAX_X-IMG_SIZE
 
 
 
